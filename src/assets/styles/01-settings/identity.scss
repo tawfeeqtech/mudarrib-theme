@@ -1,11 +1,15 @@
 // ============================================================
 // نظام هويات ثيم مدرّب — 4 لوحات ألوان
 // تُفعَّل عبر body class: identity-gold / identity-orange / identity-neon / identity-dark
-// المتغيرات مخصصة للمكوّنات الرياضية (--mud-*) ولا تمس --color-primary العام من سلة
+// تتجاوز متغيرات سلة الأساسية + خلفية داكنة لتغيير الموقع فعلياً
 // ============================================================
 
 // الهوية الذهبية (افتراضي — رياضي فاخر)
 body.identity-gold {
+  --color-primary: #C5A880;
+  --color-primary-d: #a88c62;
+  --color-primary-l: #d4b890;
+  --color-primary-reverse: #000000;
   --mud-primary: #C5A880;
   --mud-primary-bright: #d4b890;
   --mud-primary-dark: #a88c62;
@@ -20,6 +24,10 @@ body.identity-gold {
 
 // الهوية البرتقالية (طاقة ولياقة)
 body.identity-orange {
+  --color-primary: #e86942;
+  --color-primary-d: #c94f28;
+  --color-primary-l: #ff8a65;
+  --color-primary-reverse: #000000;
   --mud-primary: #e86942;
   --mud-primary-bright: #ff8a65;
   --mud-primary-dark: #c94f28;
@@ -34,6 +42,10 @@ body.identity-orange {
 
 // الهوية النيون (شبابي جريء)
 body.identity-neon {
+  --color-primary: #9EFF00;
+  --color-primary-d: #6fb800;
+  --color-primary-l: #b8ff4d;
+  --color-primary-reverse: #000000;
   --mud-primary: #9EFF00;
   --mud-primary-bright: #b8ff4d;
   --mud-primary-dark: #6fb800;
@@ -48,6 +60,10 @@ body.identity-neon {
 
 // الهوية الداكنة (كلاسيكي محايد)
 body.identity-dark {
+  --color-primary: #ffffff;
+  --color-primary-d: #c0c0c0;
+  --color-primary-l: #f0f0f0;
+  --color-primary-reverse: #000000;
   --mud-primary: #ffffff;
   --mud-primary-bright: #f0f0f0;
   --mud-primary-dark: #c0c0c0;
@@ -58,4 +74,23 @@ body.identity-dark {
   --mud-card-hover: #1e1e1e;
   --mud-border: rgba(255, 255, 255, 0.08);
   --mud-muted: #888888;
+}
+
+// ============================================================
+// تطبيق الخلفية الداكنة على الموقع (كل الهويات داكنة)
+// ============================================================
+body.identity-gold,
+body.identity-orange,
+body.identity-neon,
+body.identity-dark {
+  background-color: var(--mud-bg);
+  color: #ffffff;
+}
+
+// تلوين النصوص والروابط العامة بالهوية
+body.identity-gold a,
+body.identity-orange a,
+body.identity-neon a,
+body.identity-dark a {
+  color: inherit;
 }

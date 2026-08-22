@@ -113,6 +113,72 @@
             ]
         },
         {
+            "type": "static",
+            "format": "title",
+            "id": "loader-static-title",
+            "value": "<div style='background:#F2E5E3;border-radius:8px;padding:10px 14px;margin-bottom:14px;color:#6B4F4A;font-weight:bold;font-size:14px'>شاشة التحميل</div>",
+            "groups": [
+                "identity"
+            ]
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "تفعيل شاشة التحميل",
+            "description": "عرض شاشة تحميل أنيقة عند فتح المتجر",
+            "id": "enable_loader",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false,
+            "groups": [
+                "identity"
+            ]
+        },
+        {
+            "id": "loader_shape",
+            "type": "items",
+            "format": "dropdown-list",
+            "label": "شكل شاشة التحميل",
+            "icon": "sicon-loader",
+            "selected": [
+                {
+                    "label": "شعار + خط تقدم",
+                    "value": "1",
+                    "key": "loader-shape-1"
+                }
+            ],
+            "options": [
+                {
+                    "label": "شعار + خط تقدم",
+                    "value": "1",
+                    "key": "loader-shape-1"
+                },
+                {
+                    "label": "نقاط نبض",
+                    "value": "2",
+                    "key": "loader-shape-2"
+                }
+            ],
+            "source": "Manual",
+            "required": true,
+            "groups": [
+                "identity"
+            ]
+        },
+        {
+            "type": "string",
+            "icon": "sicon-format-text-alt",
+            "label": "نص شعار التحميل",
+            "id": "loader_logo_text",
+            "value": "مدرّب",
+            "format": "text",
+            "required": false,
+            "groups": [
+                "identity"
+            ]
+        },
+        {
             "id": "squar_photo_bg_image_size",
             "type": "items",
             "format": "dropdown-list",
@@ -426,14 +492,14 @@
     ],
     "components": [
         {
-            "key": "mudarrib-hero-0001",
+            "key": "830bb229-a60c-41d2-99ee-8d196e4e8279",
             "title": {
                 "en": "Hero",
                 "ar": "الواجهة الرئيسية"
             },
             "icon": "sicon-image-carousel",
             "path": "home.mudarrib-hero",
-            "is_default": true,
+            "is_default": null,
             "fields": [
                 {
                     "id": "shape",
@@ -475,7 +541,7 @@
                     "label": "العنوان الرئيسي",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "إعداد <span>بدني</span> احترافي",
+                    "value": "إعداد بدني احترافي",
                     "format": "text",
                     "required": false,
                     "maxLength": 100
@@ -1382,55 +1448,6 @@
                     "required": false,
                     "minLength": 1,
                     "maxLength": 30
-                }
-            ]
-        },
-        {
-            "key": "mudarrib-loader-0001",
-            "title": {
-                "en": "Loader",
-                "ar": "شاشة التحميل"
-            },
-            "icon": "sicon-loader",
-            "path": "home.mudarrib-loader",
-            "is_default": null,
-            "fields": [
-                {
-                    "id": "shape",
-                    "type": "items",
-                    "format": "dropdown-list",
-                    "label": "الشكل",
-                    "icon": "sicon-layout-grid-rearrange",
-                    "selected": [
-                        {
-                            "label": "شعار + خط تقدم",
-                            "value": "1",
-                            "key": "loader-shape-1"
-                        }
-                    ],
-                    "options": [
-                        {
-                            "label": "شعار + خط تقدم",
-                            "value": "1",
-                            "key": "loader-shape-1"
-                        },
-                        {
-                            "label": "نقاط نبض",
-                            "value": "2",
-                            "key": "loader-shape-2"
-                        }
-                    ],
-                    "source": "Manual",
-                    "required": true
-                },
-                {
-                    "type": "string",
-                    "icon": "sicon-format-text-alt",
-                    "label": "نص الشعار",
-                    "id": "logo_text",
-                    "value": "مدرّب",
-                    "format": "text",
-                    "required": false
                 }
             ]
         }
