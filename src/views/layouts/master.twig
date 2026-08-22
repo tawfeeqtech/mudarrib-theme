@@ -103,7 +103,7 @@
   {{ theme.settings.get('sticky_add_to_cart') ? ' is-sticky-product-bar' : '' }}
   ">
 {% if theme.settings.get('enable_loader', false) %}
-<div class="mudarrib-loader" data-shape="{{ theme.settings.get('loader_shape', '1') }}">
+<div class="mudarrib-loader" data-shape="{{ theme.settings.get('loader_shape', '1') }}" id="mudarrib-loader">
     {% if theme.settings.get('loader_shape', '1') == '1' %}
         <div class="l-logo">{{ theme.settings.get('loader_logo_text', 'مدرّب') }}</div>
         <div class="l-bar"><div class="l-fill"></div></div>
@@ -111,6 +111,26 @@
         <div class="l-dot"></div><div class="l-dot"></div><div class="l-dot"></div>
     {% endif %}
 </div>
+<script>
+(function () {
+  var loader = document.getElementById('mudarrib-loader');
+  if (!loader) return;
+  var hidden = false;
+  var hideLoader = function () {
+    if (hidden || !loader) return;
+    hidden = true;
+    loader.style.transition = 'opacity 0.4s ease';
+    loader.style.opacity = '0';
+    setTimeout(function () {
+      if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+    }, 450);
+  };
+  window.addEventListener('load', hideLoader);
+  if (document.readyState === 'complete') hideLoader();
+  // صمام أمان: أخفي إجبارياً بعد 5 ثوانٍ حتى لو فشل التحميل
+  setTimeout(hideLoader, 5000);
+})();
+</script>
 {% endif %}
 <noscript>
     To get full functionality of this site you need to enable JavaScript. Here is how
