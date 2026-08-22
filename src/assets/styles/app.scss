@@ -53,6 +53,7 @@
 @import './01-settings/tailwind';
 @import './01-settings/fonts';
 @import './01-settings/global';
+@import './01-settings/identity';
 @import './01-settings/breakpoints';
 
 @import './02-generic/reset';
@@ -72,6 +73,7 @@
 @import './03-elements/testimonials';
 
 @import './04-components/header';
+@import './04-components/mudarrib-hero';
 @import './04-components/footer';
 @import './04-components/menus';
 @import './04-components/user-menu';

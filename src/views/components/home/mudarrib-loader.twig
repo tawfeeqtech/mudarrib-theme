@@ -1,0 +1,11 @@
+{#
+| component.shape | 1=شعار+خط تقدم, 2=نقاط نبض |
+#}
+<div class="mudarrib-loader" data-shape="{{ component.shape|default('1') }}">
+    {% if component.shape|default('1') == '1' %}
+        <div class="l-logo">{{ component.logo_text|default('مدرّب') }}</div>
+        <div class="l-bar"><div class="l-fill"></div></div>
+    {% else %}
+        <div class="l-dot"></div><div class="l-dot"></div><div class="l-dot"></div>
+    {% endif %}
+</div>

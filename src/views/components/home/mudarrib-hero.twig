@@ -1,0 +1,60 @@
+{#
+| Variable          | Type     | Description                    |
+|-------------------|----------|--------------------------------|
+| component         | object   | merchant settings from twilight.json |
+| component.shape   | string   | 1=رياضي داكن, 2=صورة كاملة, 3=نص مركزي |
+| component.title   | string   | العنوان الرئيسي                |
+| component.subtitle| string   | نص فرعي                       |
+| component.btn_text| string   | نص الزر                       |
+| component.btn_url | string   | رابط الزر                     |
+| component.image   | string   | صورة الخلفية (شكل 2)          |
+| position          | int      |                             |
+#}
+<section class="s-block mudarrib-hero" data-shape="{{ component.shape|default('1') }}">
+    {% if component.shape|default('1') == '1' %}
+        {# شكل 1: رياضي داكن #}
+        <h1 class="hero-title">{{ component.title|default('إعداد بدني احترافي')|raw }}</h1>
+        {% if component.tags %}
+            <div class="hero-tags">
+                {% for tag in component.tags %}
+                    <div class="hero-tag">
+                        <span class="ic">{{ tag.icon }}</span>
+                        <span class="txt">{{ tag.label }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if component.btn_text %}
+            <a href="{{ component.btn_url|default('#') }}" class="hero-btn">{{ component.btn_text }}</a>
+        {% endif %}
+
+    {% elseif component.shape|default('1') == '2' %}
+        {# شكل 2: صورة كاملة #}
+        <div class="hero-bg" style="--mud-hero-image: url('{{ component.image }}');"></div>
+        <div class="hero-content">
+            <h2 class="hero-ar">{{ component.subtitle|default('اصنع نسختك الأفضل مع') }}</h2>
+            <h1 class="hero-en">{{ component.title|default('COACH NAME') }}</h1>
+            {% if component.description %}
+                <p class="hero-desc">{{ component.description }}</p>
+            {% endif %}
+            {% if component.btn_text %}
+                <a href="{{ component.btn_url|default('#') }}" class="hero-btn">{{ component.btn_text }}</a>
+            {% endif %}
+        </div>
+
+    {% else %}
+        {# شكل 3: نص مركزي بلا صورة #}
+        <div class="hero-inner">
+            {% if component.subtitle %}
+                <p class="hero-eyebrow">{{ component.subtitle }}</p>
+            {% endif %}
+            <h2>{{ component.title|default('حقق هدفك البدني بخطة علمية واضحة') }}</h2>
+            {% if component.description %}
+                <p class="hero-desc">{{ component.description }}</p>
+            {% endif %}
+            {% if component.btn_text %}
+                <a href="{{ component.btn_url|default('#') }}" class="hero-btn">{{ component.btn_text }}</a>
+            {% endif %}
+        </div>
+    {% endif %}
+</section>

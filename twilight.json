@@ -26,6 +26,12 @@
     ],
     "groups": [
         {
+            "id": "identity",
+            "icon": "sicon-color-palette",
+            "type": "page",
+            "label": "هوية الثيم"
+        },
+        {
             "id": "product-card",
             "icon": "sicon-layout-grid-rearrange",
             "type": "page",
@@ -63,6 +69,49 @@
         }
     ],
     "settings": [
+        {
+            "id": "theme_identity",
+            "type": "items",
+            "format": "dropdown-list",
+            "label": "لوحة الألوان",
+            "description": "اختر هوية الثيم — تتغير كل ألوان الأقسام فوراً",
+            "labelHTML": null,
+            "icon": "sicon-color-palette",
+            "selected": [
+                {
+                    "label": "ذهبي",
+                    "value": "gold",
+                    "key": "identity-gold"
+                }
+            ],
+            "options": [
+                {
+                    "label": "ذهبي (رياضي فاخر)",
+                    "value": "gold",
+                    "key": "identity-gold"
+                },
+                {
+                    "label": "برتقالي (طاقة ولياقة)",
+                    "value": "orange",
+                    "key": "identity-orange"
+                },
+                {
+                    "label": "نيون (شبابي جريء)",
+                    "value": "neon",
+                    "key": "identity-neon"
+                },
+                {
+                    "label": "داكن (كلاسيكي)",
+                    "value": "dark",
+                    "key": "identity-dark"
+                }
+            ],
+            "source": "Manual",
+            "required": true,
+            "groups": [
+                "identity"
+            ]
+        },
         {
             "id": "squar_photo_bg_image_size",
             "type": "items",
@@ -376,6 +425,110 @@
         }
     ],
     "components": [
+        {
+            "key": "mudarrib-hero-0001",
+            "title": {
+                "en": "Hero",
+                "ar": "الواجهة الرئيسية"
+            },
+            "icon": "sicon-image-carousel",
+            "path": "home.mudarrib-hero",
+            "is_default": true,
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "description": "اختر نمط عرض الواجهة",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "رياضي داكن",
+                            "value": "1",
+                            "key": "hero-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "رياضي داكن",
+                            "value": "1",
+                            "key": "hero-shape-1"
+                        },
+                        {
+                            "label": "صورة كاملة",
+                            "value": "2",
+                            "key": "hero-shape-2"
+                        },
+                        {
+                            "label": "نص مركزي",
+                            "value": "3",
+                            "key": "hero-shape-3"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان الرئيسي",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "إعداد <span>بدني</span> احترافي",
+                    "format": "text",
+                    "required": false,
+                    "maxLength": 100
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "نص فرعي",
+                    "multilanguage": true,
+                    "id": "subtitle",
+                    "value": null,
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الوصف",
+                    "multilanguage": true,
+                    "id": "description",
+                    "value": null,
+                    "format": "textarea",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "نص الزر",
+                    "id": "btn_text",
+                    "value": "تدريب شخصي اونلاين",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-link",
+                    "label": "رابط الزر",
+                    "id": "btn_url",
+                    "value": null,
+                    "format": "url",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-image",
+                    "label": "صورة الخلفية (شكل الصورة الكاملة)",
+                    "id": "image",
+                    "value": null,
+                    "format": "image",
+                    "required": false
+                }
+            ]
+        },
         {
             "key": "186b3f4f-25cf-4d3c-abca-cef7eed6f0ab",
             "title": {
@@ -1229,6 +1382,55 @@
                     "required": false,
                     "minLength": 1,
                     "maxLength": 30
+                }
+            ]
+        },
+        {
+            "key": "mudarrib-loader-0001",
+            "title": {
+                "en": "Loader",
+                "ar": "شاشة التحميل"
+            },
+            "icon": "sicon-loader",
+            "path": "home.mudarrib-loader",
+            "is_default": null,
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "شعار + خط تقدم",
+                            "value": "1",
+                            "key": "loader-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "شعار + خط تقدم",
+                            "value": "1",
+                            "key": "loader-shape-1"
+                        },
+                        {
+                            "label": "نقاط نبض",
+                            "value": "2",
+                            "key": "loader-shape-2"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "نص الشعار",
+                    "id": "logo_text",
+                    "value": "مدرّب",
+                    "format": "text",
+                    "required": false
                 }
             ]
         }

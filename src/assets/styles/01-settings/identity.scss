@@ -1,0 +1,61 @@
+// ============================================================
+// نظام هويات ثيم مدرّب — 4 لوحات ألوان
+// تُفعَّل عبر body class: identity-gold / identity-orange / identity-neon / identity-dark
+// المتغيرات مخصصة للمكوّنات الرياضية (--mud-*) ولا تمس --color-primary العام من سلة
+// ============================================================
+
+// الهوية الذهبية (افتراضي — رياضي فاخر)
+body.identity-gold {
+  --mud-primary: #C5A880;
+  --mud-primary-bright: #d4b890;
+  --mud-primary-dark: #a88c62;
+  --mud-glow: rgba(197, 168, 128, 0.35);
+  --mud-bg: #0F0F0F;
+  --mud-bg-alt: #141414;
+  --mud-card: #1A1A1A;
+  --mud-card-hover: #222222;
+  --mud-border: rgba(255, 255, 255, 0.08);
+  --mud-muted: #999999;
+}
+
+// الهوية البرتقالية (طاقة ولياقة)
+body.identity-orange {
+  --mud-primary: #e86942;
+  --mud-primary-bright: #ff8a65;
+  --mud-primary-dark: #c94f28;
+  --mud-glow: rgba(232, 105, 66, 0.35);
+  --mud-bg: #140b07;
+  --mud-bg-alt: #1a0e08;
+  --mud-card: #21130d;
+  --mud-card-hover: #2a1810;
+  --mud-border: rgba(255, 255, 255, 0.08);
+  --mud-muted: #b8a29a;
+}
+
+// الهوية النيون (شبابي جريء)
+body.identity-neon {
+  --mud-primary: #9EFF00;
+  --mud-primary-bright: #b8ff4d;
+  --mud-primary-dark: #6fb800;
+  --mud-glow: rgba(158, 255, 0, 0.30);
+  --mud-bg: #0b0f12;
+  --mud-bg-alt: #10151a;
+  --mud-card: #14181c;
+  --mud-card-hover: #1a2026;
+  --mud-border: rgba(158, 255, 0, 0.12);
+  --mud-muted: #9aa5ad;
+}
+
+// الهوية الداكنة (كلاسيكي محايد)
+body.identity-dark {
+  --mud-primary: #ffffff;
+  --mud-primary-bright: #f0f0f0;
+  --mud-primary-dark: #c0c0c0;
+  --mud-glow: rgba(255, 255, 255, 0.15);
+  --mud-bg: #0a0a0a;
+  --mud-bg-alt: #0f0f0f;
+  --mud-card: #161616;
+  --mud-card-hover: #1e1e1e;
+  --mud-border: rgba(255, 255, 255, 0.08);
+  --mud-muted: #888888;
+}
