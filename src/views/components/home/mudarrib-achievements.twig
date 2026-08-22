@@ -1,0 +1,42 @@
+{#
+| component.shape | 1=بطاقات, 2=قائمة أفقية |
+| component.items | مجموعة إنجازات (title, value, icon, is_gold) |
+#}
+<section class="s-block mudarrib-ach container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('إنجازات مع الرياضيين') }}</h2>
+        <div class="line-glow"></div>
+        {% if component.subtitle %}<p class="en-sub">{{ component.subtitle }}</p>{% endif %}
+    </div>
+
+    {% if component.shape|default('1') == '1' %}
+        <div class="ach-large">
+            {% for item in component.items|default([]) %}
+                <div class="ach-card {% if item.is_gold %}gold{% endif %}">
+                    <div class="ach-flex">
+                        <span class="ach-icon">{{ item.icon|default('🏅') }}</span>
+                        <div>
+                            <h3>{{ item.title }}</h3>
+                            <p class="ach-sub">{{ item.value }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% if component.small_items %}
+            <div class="ach-small">
+                {% for s in component.small_items %}
+                    <div class="ach-small-card"><h4>{{ s.title }}</h4><span class="hl">{{ s.value }}</span></div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% else %}
+        {% for item in component.items|default([]) %}
+            <div class="ach-row">
+                <span class="medal">{{ item.icon|default('🏅') }}</span>
+                <h4>{{ item.title }}</h4>
+                <span class="val">{{ item.value }}</span>
+            </div>
+        {% endfor %}
+    {% endif %}
+</section>

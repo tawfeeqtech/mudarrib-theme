@@ -1,0 +1,49 @@
+{#
+| component.shape  | 1=قبل/بعد, 2=نبذة مبسطة |
+| component.title  | اسم الكوتش |
+| component.subtitle | الدور |
+| component.meta   | سطر الشهادات |
+| component.before_label / after_label | نصوص الشارات |
+| component.before_image / after_image | الصور |
+| component.before_text / after_text | النصوص |
+| component.closing | الخاتمة |
+#}
+<section class="s-block mudarrib-story container" data-shape="{{ component.shape|default('1') }}">
+    <div class="story-head">
+        <h2>{{ component.title|default('اسم الكوتش') }}</h2>
+        {% if component.subtitle %}<div class="sub">{{ component.subtitle }}</div>{% endif %}
+        {% if component.meta %}<div class="meta">{{ component.meta }}</div>{% endif %}
+    </div>
+
+    {% if component.shape|default('1') == '1' %}
+        <div class="story-block">
+            <div class="story-img-wrap">
+                <span class="story-badge">{{ component.before_label|default('قبل') }}</span>
+                {% if component.before_image %}<img src="{{ component.before_image }}" alt="قبل">{% endif %}
+            </div>
+            <div class="story-txt">
+                <div class="story-eyebrow">{{ component.before_title|default('لحظة البداية') }}</div>
+                <p>{{ component.before_text|default('') }}</p>
+            </div>
+        </div>
+        <div class="story-arrow">⬇️</div>
+        <div class="story-block">
+            <div class="story-img-wrap">
+                <span class="story-badge">{{ component.after_label|default('بعد') }}</span>
+                {% if component.after_image %}<img src="{{ component.after_image }}" alt="بعد">{% endif %}
+            </div>
+            <div class="story-txt">
+                <div class="story-eyebrow">{{ component.after_title|default('التحول') }}</div>
+                <p>{{ component.after_text|default('') }}</p>
+            </div>
+        </div>
+        {% if component.closing %}<div class="story-closing">{{ component.closing }}</div>{% endif %}
+    {% else %}
+        <div class="bio-card">
+            <div class="bio-avatar">{{ component.avatar_letter|default('م') }}</div>
+            <h3>{{ component.title|default('اسم الكوتش') }}</h3>
+            <div class="role">{{ component.subtitle|default('مدرب معتمد') }}</div>
+            <p>{{ component.description|default('') }}</p>
+        </div>
+    {% endif %}
+</section>

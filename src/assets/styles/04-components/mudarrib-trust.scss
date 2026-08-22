@@ -1,0 +1,90 @@
+// ============================================================
+// ثيم مدرّب — أقسام الثقة (Story / Achievements / Counters / Why / Features)
+// نمط موحّد: data-shape
+// ============================================================
+
+/* ---------- قصة الكوتش (Story) ---------- */
+.mudarrib-story .story-head { text-align: center; margin-bottom: 45px; }
+.mudarrib-story .story-head h2 { font-size: 2.2rem; font-weight: 900; }
+.mudarrib-story .story-head .sub { color: var(--mud-primary); font-weight: 700; }
+.mudarrib-story .story-head .meta { color: var(--mud-muted); font-size: 0.85rem; }
+
+/* shape 1: قبل/بعد */
+.mudarrib-story[data-shape="1"] .story-block { display: flex; gap: 40px; align-items: center; margin-bottom: 30px; }
+.mudarrib-story .story-img-wrap { position: relative; border-radius: 20px; padding: 3px; max-width: 280px; flex-shrink: 0; }
+.mudarrib-story .story-img-wrap img { border-radius: 17px; width: 100%; height: auto; object-fit: cover; }
+.mudarrib-story .story-badge { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.75); color: var(--mud-primary); border: 1px solid var(--mud-glow); padding: 4px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; }
+.mudarrib-story .story-eyebrow { font-weight: 800; margin-bottom: 10px; color: var(--mud-primary); }
+.mudarrib-story .story-txt p { color: var(--mud-muted); line-height: 1.8; margin-bottom: 14px; }
+.mudarrib-story .story-arrow { text-align: center; margin: 10px 0 30px; font-size: 1.4rem; }
+.mudarrib-story .story-closing { text-align: center; padding-top: 25px; border-top: 1px solid var(--mud-border); font-weight: 800; font-size: 1.15rem; }
+
+/* shape 2: بطاقة مبسطة */
+.mudarrib-story[data-shape="2"] .bio-card { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 24px; padding: 40px; text-align: center; max-width: 800px; margin: 0 auto; }
+.mudarrib-story[data-shape="2"] .bio-avatar { width: 100px; height: 100px; border-radius: 50%; background: var(--mud-glow); border: 2px solid var(--mud-primary); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 900; color: var(--mud-primary); }
+.mudarrib-story[data-shape="2"] h3 { font-size: 1.5rem; margin-bottom: 4px; }
+.mudarrib-story[data-shape="2"] .role { color: var(--mud-primary); font-weight: 700; margin-bottom: 20px; }
+.mudarrib-story[data-shape="2"] p { color: var(--mud-muted); line-height: 1.8; }
+
+/* ---------- الإنجازات (Achievements) ---------- */
+.mudarrib-ach .ach-large { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px; }
+.mudarrib-ach .ach-card { border-radius: 24px; padding: 25px; border: 1px solid var(--mud-border); background: var(--mud-card); }
+.mudarrib-ach .ach-card.gold { border-color: var(--mud-glow); background: linear-gradient(135deg, var(--mud-glow), var(--mud-card) 60%); }
+.mudarrib-ach .ach-flex { display: flex; align-items: center; gap: 15px; }
+.mudarrib-ach .ach-icon { font-size: 1.5rem; flex-shrink: 0; }
+.mudarrib-ach h3 { font-size: 1.25rem; font-weight: 800; }
+.mudarrib-ach .ach-sub { color: var(--mud-muted); font-size: 0.88rem; }
+.mudarrib-ach .ach-small { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.mudarrib-ach .ach-small-card { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 20px; text-align: center; padding: 20px 10px; }
+.mudarrib-ach .ach-small-card h4 { font-size: 1rem; margin-bottom: 5px; }
+.mudarrib-ach .ach-small-card .hl { color: var(--mud-primary); font-weight: 700; font-size: 0.85rem; }
+
+/* shape 2: قائمة أفقية */
+.mudarrib-ach[data-shape="2"] { display: flex; flex-direction: column; gap: 12px; }
+.mudarrib-ach[data-shape="2"] .ach-row { display: flex; align-items: center; gap: 18px; background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 16px; padding: 18px 22px; }
+.mudarrib-ach[data-shape="2"] .ach-row .medal { font-size: 1.6rem; }
+.mudarrib-ach[data-shape="2"] .ach-row h4 { flex: 1; font-size: 1.05rem; }
+.mudarrib-ach[data-shape="2"] .ach-row .val { color: var(--mud-primary); font-weight: 900; }
+
+/* ---------- أرقام متحركة (Counters) ---------- */
+.mudarrib-counters .counters-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.mudarrib-counters .counter-card { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 20px; text-align: center; padding: 30px 15px; }
+.mudarrib-counters .num { font-size: 2.4rem; font-weight: 900; color: var(--mud-primary); }
+.mudarrib-counters .lbl { color: var(--mud-muted); font-size: 0.9rem; margin-top: 6px; }
+/* shape 2: شريط متصل */
+.mudarrib-counters[data-shape="2"] .counters-strip { display: flex; background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 20px; overflow: hidden; }
+.mudarrib-counters[data-shape="2"] .c2 { flex: 1; text-align: center; padding: 30px 10px; }
+.mudarrib-counters[data-shape="2"] .c2 + .c2 { border-right: 1px solid var(--mud-border); }
+.mudarrib-counters[data-shape="2"] .num { font-size: 2rem; }
+
+/* ---------- لماذا أنا (Why) ---------- */
+.mudarrib-why .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mudarrib-why .why-card { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 20px; padding: 30px 24px; transition: all 0.3s; }
+.mudarrib-why .why-card:hover { border-color: var(--mud-primary); transform: translateY(-5px); }
+.mudarrib-why .why-ic { width: 52px; height: 52px; border-radius: 14px; background: var(--mud-glow); border: 1px solid var(--mud-primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 18px; }
+.mudarrib-why h3 { font-size: 1.15rem; margin-bottom: 10px; }
+.mudarrib-why p { color: var(--mud-muted); font-size: 0.9rem; line-height: 1.7; }
+/* shape 2: قائمة */
+.mudarrib-why[data-shape="2"] { display: flex; flex-direction: column; gap: 16px; }
+.mudarrib-why[data-shape="2"] .why-row { display: flex; align-items: center; gap: 18px; background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 16px; padding: 20px 22px; }
+.mudarrib-why[data-shape="2"] .why-ic { margin-bottom: 0; flex-shrink: 0; }
+
+/* ---------- المميزات (Features) ---------- */
+.mudarrib-feat .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mudarrib-feat .feat-item { text-align: center; padding: 28px 20px; }
+.mudarrib-feat .feat-ic { font-size: 2.2rem; margin-bottom: 14px; }
+.mudarrib-feat h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.mudarrib-feat p { color: var(--mud-muted); font-size: 0.88rem; line-height: 1.6; }
+/* shape 2: شبكة أيقونات */
+.mudarrib-feat[data-shape="2"] .feat-grid { grid-template-columns: repeat(2, 1fr); border: 1px solid var(--mud-border); border-radius: 20px; overflow: hidden; }
+.mudarrib-feat[data-shape="2"] .f2 { display: flex; gap: 16px; padding: 26px; background: var(--mud-card); text-align: right; }
+.mudarrib-feat[data-shape="2"] .feat-ic { flex-shrink: 0; }
+
+/* تجاوب */
+@media (max-width: 900px) {
+  .mudarrib-story[data-shape="1"] .story-block { flex-direction: column; text-align: center; }
+  .mudarrib-ach .ach-large, .mudarrib-why .why-grid, .mudarrib-feat .feat-grid, .mudarrib-counters .counters-grid { grid-template-columns: 1fr; }
+  .mudarrib-ach .ach-small { grid-template-columns: repeat(2, 1fr); }
+  .mudarrib-counters[data-shape="2"] .counters-strip { flex-wrap: wrap; }
+  .mudarrib-counters[data-shape="2"] .c2 { flex: 1 1 50%; border-bottom: 1px solid var(--mud-border); }
+}

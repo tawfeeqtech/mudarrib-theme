@@ -1,0 +1,24 @@
+{#
+| component.shape | 1=شبكة, 2=شريط متصل |
+| component.items | أرقام (number, label) |
+#}
+<section class="s-block mudarrib-counters container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('أرقام تتحدث عنا') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+
+    {% if component.shape|default('1') == '1' %}
+        <div class="counters-grid">
+            {% for item in component.items|default([]) %}
+                <div class="counter-card"><div class="num">{{ item.number }}</div><div class="lbl">{{ item.label }}</div></div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="counters-strip">
+            {% for item in component.items|default([]) %}
+                <div class="c2"><div class="num">{{ item.number }}</div><div class="lbl">{{ item.label }}</div></div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</section>
