@@ -1,0 +1,69 @@
+// ============================================================
+// ثيم مدرّب — أقسام الإثبات (Testimonials / Results / Gallery / Before-After)
+// ============================================================
+
+/* ---------- آراء الأبطال (Testimonials) ---------- */
+.mudarrib-testi .testi-slider { display: flex; overflow-x: auto; gap: 20px; padding: 20px 10px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.mudarrib-testi .testi-slider::-webkit-scrollbar { display: none; }
+.mudarrib-testi .testi-card { scroll-snap-align: center; min-width: 320px; max-width: 350px; background: var(--mud-card); border-radius: 20px; padding: 28px; border: 1px solid var(--mud-border); text-align: right; flex-shrink: 0; transition: all 0.3s; }
+.mudarrib-testi .testi-card:hover { transform: translateY(-8px); border-color: var(--mud-glow); }
+.mudarrib-testi .testi-stars { color: #FFD700; margin-bottom: 12px; letter-spacing: 3px; }
+.mudarrib-testi .testi-comment { color: var(--mud-muted); line-height: 1.7; margin-bottom: 18px; font-size: 0.95rem; }
+.mudarrib-testi .testi-divider { height: 1px; background: var(--mud-border); margin-bottom: 16px; }
+.mudarrib-testi .testi-client { display: flex; align-items: center; gap: 12px; }
+.mudarrib-testi .testi-avatar { width: 46px; height: 46px; border-radius: 50%; background: var(--mud-card-hover); display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--mud-primary); border: 1px solid var(--mud-glow); }
+.mudarrib-testi .testi-client h4 { font-size: 1rem; }
+.mudarrib-testi .testi-client span { font-size: 0.78rem; color: var(--mud-primary); }
+/* shape 2: شبكة */
+.mudarrib-testi[data-shape="2"] .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+/* shape 3: بطاقة مركزية */
+.mudarrib-testi[data-shape="3"] .testi-focus { background: var(--mud-card); border: 1px solid var(--mud-primary); border-radius: 26px; padding: 40px 34px; text-align: center; max-width: 620px; margin: 0 auto; }
+.mudarrib-testi[data-shape="3"] .big-quote { font-size: 4rem; color: var(--mud-primary); opacity: 0.25; line-height: 1; margin-bottom: 10px; }
+.mudarrib-testi[data-shape="3"] .comment { font-size: 1.15rem; line-height: 1.8; margin-bottom: 24px; }
+.mudarrib-testi[data-shape="3"] .stars { color: #FFD700; letter-spacing: 3px; margin-bottom: 16px; }
+
+/* ---------- نتائج اللاعبين (Results) ---------- */
+.mudarrib-results .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mudarrib-results .result-card { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 20px; overflow: hidden; }
+.mudarrib-results .r-img { height: 180px; background: var(--mud-glow); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
+.mudarrib-results .r-body { padding: 20px; text-align: center; }
+.mudarrib-results h4 { font-size: 1.05rem; margin-bottom: 4px; }
+.mudarrib-results .r-metric { color: var(--mud-primary); font-weight: 900; font-size: 1.1rem; }
+.mudarrib-results .r-detail { color: var(--mud-muted); font-size: 0.85rem; }
+/* shape 2: أشرطة تقدم */
+.mudarrib-results[data-shape="2"] { display: flex; flex-direction: column; gap: 14px; }
+.mudarrib-results[data-shape="2"] .res-row { display: flex; align-items: center; gap: 16px; background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 16px; padding: 18px 22px; }
+.mudarrib-results[data-shape="2"] .avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--mud-glow); border: 1px solid var(--mud-primary); display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--mud-primary); flex-shrink: 0; }
+.mudarrib-results[data-shape="2"] .info { flex: 1; }
+.mudarrib-results[data-shape="2"] .progress { height: 6px; background: var(--mud-card-hover); border-radius: 3px; margin-top: 8px; overflow: hidden; }
+.mudarrib-results[data-shape="2"] .progress .fill { height: 100%; background: var(--mud-primary); border-radius: 3px; }
+.mudarrib-results[data-shape="2"] .pct { color: var(--mud-primary); font-weight: 900; }
+
+/* ---------- ألبوم الأبطال (Gallery) ---------- */
+.mudarrib-gallery .gal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.mudarrib-gallery .gal-item { aspect-ratio: 1; border-radius: 16px; background: var(--mud-glow); border: 1px solid var(--mud-border); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; transition: all 0.3s; cursor: pointer; overflow: hidden; }
+.mudarrib-gallery .gal-item:hover { transform: scale(1.04); border-color: var(--mud-primary); }
+.mudarrib-gallery .gal-item img { width: 100%; height: 100%; object-fit: cover; }
+/* shape 2: سلايدر أفقي */
+.mudarrib-gallery[data-shape="2"] .gal-strip { display: flex; overflow-x: auto; gap: 14px; scrollbar-width: none; }
+.mudarrib-gallery[data-shape="2"] .gal-item { min-width: 200px; flex-shrink: 0; }
+
+/* ---------- سلايدر تحوّل (Before-After) ---------- */
+.mudarrib-ba .ba-box { position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 16/9; background: var(--mud-glow); border: 1px solid var(--mud-border); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+.mudarrib-ba .ba-label { position: absolute; top: 16px; padding: 6px 18px; border-radius: 50px; font-weight: 800; font-size: 0.85rem; }
+.mudarrib-ba .ba-before { right: 16px; background: var(--mud-card); color: var(--mud-muted); }
+.mudarrib-ba .ba-after { left: 16px; background: var(--mud-primary); color: #000; }
+/* shape 2: بطاقتان */
+.mudarrib-ba[data-shape="2"] .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.mudarrib-ba[data-shape="2"] .ba-card { border-radius: 20px; overflow: hidden; border: 1px solid var(--mud-border); }
+.mudarrib-ba[data-shape="2"] .ba-card .img { aspect-ratio: 1; background: var(--mud-glow); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+.mudarrib-ba[data-shape="2"] .ba-card .img img { width: 100%; height: 100%; object-fit: cover; }
+.mudarrib-ba[data-shape="2"] .cap { background: var(--mud-card); padding: 14px; text-align: center; font-weight: 800; }
+.mudarrib-ba[data-shape="2"] .before .cap { color: var(--mud-muted); }
+.mudarrib-ba[data-shape="2"] .after .cap { color: var(--mud-primary); }
+
+@media (max-width: 900px) {
+  .mudarrib-testi[data-shape="2"] .testi-grid, .mudarrib-results .results-grid, .mudarrib-gallery .gal-grid { grid-template-columns: 1fr; }
+  .mudarrib-ba[data-shape="2"] .ba-grid { grid-template-columns: 1fr; }
+  .mudarrib-gallery .gal-grid { grid-template-columns: repeat(2, 1fr); }
+}

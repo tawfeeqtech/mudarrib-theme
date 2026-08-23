@@ -1,0 +1,37 @@
+{#
+| component.shape | 1=جدول, 2=صفوف |
+| component.columns_text | أسماء الباقات مفصولة بفاصلة |
+| component.rows_text | كل سطر: اسم الميزة=قيم 1/0 مفصولة بفاصلة |
+#}
+<section class="s-block mudarrib-compare container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('قارن الباقات') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+
+    {% set columns = component.columns_text|default('')|split(',') %}
+    {% if component.shape|default('1') == '1' %}
+        <table>
+            <tr><th>الميزة</th>{% for col in columns %}{% if col|trim %}<th {% if loop.index == 2 %}class="highlight-col"{% endif %}>{{ col|trim }}</th>{% endif %}{% endfor %}</tr>
+            {% for line in component.rows_text|default('')|split('\n') %}
+                {% set parts = line|split('=') %}
+                {% if parts|length > 1 %}
+                    <tr>
+                        <td>{{ parts[0]|trim }}</td>
+                        {% for v in parts[1]|split(',') %}<td class="{{ v|trim == '1' ? 'yes' : 'no' }}">{{ v|trim == '1' ? '✓' : '✗' }}</td>{% endfor %}
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+    {% else %}
+        {% for line in component.rows_text|default('')|split('\n') %}
+            {% set parts = line|split('=') %}
+            {% if parts|length > 1 %}
+                <div class="cmp-row">
+                    <span class="f">{{ parts[0]|trim }}</span>
+                    <div class="vals">{% for v in parts[1]|split(',') %}<span class="v {{ v|trim == '1' ? 'yes' : '' }}">{{ v|trim == '1' ? '✓' : '✗' }}</span>{% endfor %}</div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+</section>

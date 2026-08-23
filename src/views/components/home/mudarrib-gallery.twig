@@ -1,0 +1,23 @@
+{#
+| component.shape | 1=شبكة, 2=سلايدر |
+| component.items | (image, icon) |
+#}
+<section class="s-block mudarrib-gallery container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('ألبوم الرياضيين') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    {% if component.shape|default('1') == '1' %}
+        <div class="gal-grid">
+            {% for item in component.items|default([]) %}
+                <div class="gal-item">{% if item.image %}<img src="{{ item.image }}" alt="">{% else %}{{ item.icon|default('🏆') }}{% endif %}</div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="gal-strip">
+            {% for item in component.items|default([]) %}
+                <div class="gal-item">{% if item.image %}<img src="{{ item.image }}" alt="">{% else %}{{ item.icon|default('🏆') }}{% endif %}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</section>

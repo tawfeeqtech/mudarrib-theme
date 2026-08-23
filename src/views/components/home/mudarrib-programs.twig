@@ -1,0 +1,30 @@
+{#
+| component.shape | 1=بطاقات, 2=قائمة |
+| component.items | (icon, title, duration, text) |
+#}
+<section class="s-block mudarrib-programs container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('برامج التدريب') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    {% if component.shape|default('1') == '1' %}
+        <div class="prog-grid">
+            {% for item in component.items|default([]) %}
+                <div class="prog-card">
+                    <div class="prog-img">{{ item.icon|default('⚽') }}</div>
+                    <div class="prog-body"><h3>{{ item.title }}</h3><div class="dur">{{ item.duration }}</div><p>{{ item.text }}</p></div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="prog-grid">
+            {% for item in component.items|default([]) %}
+                <div class="prog-row">
+                    <div class="prog-ic">{{ item.icon|default('⚽') }}</div>
+                    <div class="prog-info"><h3>{{ item.title }}</h3><p>{{ item.text }}</p></div>
+                    <span class="tag">{{ item.duration }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</section>

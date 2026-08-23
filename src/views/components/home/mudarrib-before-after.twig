@@ -1,0 +1,21 @@
+{#
+| component.shape | 1=منزلقة, 2=بطاقتان |
+#}
+<section class="s-block mudarrib-ba container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('قبل وبعد') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    {% if component.shape|default('1') == '1' %}
+        <div class="ba-box">
+            <span class="ba-label ba-before">{{ component.before_label|default('قبل') }}</span>
+            <span class="ba-label ba-after">{{ component.after_label|default('بعد') }}</span>
+            {{ component.icon|default('🏋️') }}
+        </div>
+    {% else %}
+        <div class="ba-grid">
+            <div class="ba-card before"><div class="img">{% if component.before_image %}<img src="{{ component.before_image }}" alt="">{% else %}😮{% endif %}</div><div class="cap">{{ component.before_label|default('قبل') }}</div></div>
+            <div class="ba-card after"><div class="img">{% if component.after_image %}<img src="{{ component.after_image }}" alt="">{% else %}💪{% endif %}</div><div class="cap">{{ component.after_label|default('بعد') }}</div></div>
+        </div>
+    {% endif %}
+</section>

@@ -1,0 +1,18 @@
+{#
+| component.shape | 1=صندوق مركزي, 2=بانر أفقي |
+#}
+<section class="s-block mudarrib-promo container" data-shape="{{ component.shape|default('1') }}">
+    {% if component.shape|default('1') == '1' %}
+        <div class="promo-box">
+            <h3>{{ component.title|default('خصم خاص لمتابعيني 🎁') }}</h3>
+            <p>{{ component.text|default('استخدم الكود عند الدفع واحصل على خصم') }}</p>
+            <div class="promo-code">{{ component.code|default('COACH20') }}</div>
+        </div>
+    {% else %}
+        <div class="promo-banner">
+            <span class="ic">{{ component.icon|default('🎁') }}</span>
+            <div class="txt"><h3>{{ component.title|default('خصم خاص لمتابعيني') }}</h3><p>{{ component.text|default('') }}</p></div>
+            <span class="code">{{ component.code|default('COACH20') }}</span>
+        </div>
+    {% endif %}
+</section>

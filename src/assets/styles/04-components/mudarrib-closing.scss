@@ -1,0 +1,47 @@
+// ============================================================
+// ثيم مدرّب — أقسام الختام (FAQ / CTA / Contact)
+// ============================================================
+
+/* ---------- الأسئلة الشائعة (FAQ) ---------- */
+.mudarrib-faq .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.mudarrib-faq .acc-item { background: var(--mud-card); border-radius: 16px; border: 1px solid var(--mud-border); cursor: pointer; transition: all 0.35s; }
+.mudarrib-faq .acc-item:hover { border-color: var(--mud-primary); }
+.mudarrib-faq .acc-header { padding: 22px 24px; font-weight: 800; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; }
+.mudarrib-faq .acc-header span { color: var(--mud-primary); font-size: 1.5rem; font-weight: 300; transition: transform 0.4s; }
+.mudarrib-faq .acc-content { padding: 0 24px; max-height: 0; overflow: hidden; transition: all 0.5s; color: var(--mud-muted); line-height: 1.8; font-size: 0.92rem; }
+.mudarrib-faq .acc-item.active { border-color: var(--mud-primary); }
+.mudarrib-faq .acc-item.active .acc-content { padding-bottom: 24px; max-height: 400px; }
+.mudarrib-faq .acc-item.active .acc-header span { transform: rotate(45deg); }
+/* shape 2: عمود واحد */
+.mudarrib-faq[data-shape="2"] .faq-grid { grid-template-columns: 1fr; max-width: 700px; margin: 0 auto; }
+
+/* ---------- دعوة نهائية (CTA) ---------- */
+.mudarrib-cta .cta-box { background: linear-gradient(135deg, var(--mud-glow), var(--mud-card)); border: 1px solid var(--mud-primary); border-radius: 26px; padding: 50px 40px; text-align: center; }
+.mudarrib-cta h2 { font-size: 2rem; margin-bottom: 12px; }
+.mudarrib-cta p { color: var(--mud-muted); margin-bottom: 26px; }
+/* shape 2: منقسم */
+.mudarrib-cta[data-shape="2"] .cta-split { display: flex; align-items: center; gap: 30px; background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 24px; padding: 40px; }
+.mudarrib-cta[data-shape="2"] .txt { flex: 1; }
+.mudarrib-cta[data-shape="2"] h3 { font-size: 1.5rem; margin-bottom: 8px; }
+.mudarrib-cta[data-shape="2"] p { color: var(--mud-muted); margin-bottom: 0; }
+
+/* ---------- تواصل (Contact) ---------- */
+.mudarrib-contact .contact-form { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 24px; padding: 34px; }
+.mudarrib-contact .cf-field { margin-bottom: 18px; }
+.mudarrib-contact .cf-field label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 0.9rem; }
+.mudarrib-contact .cf-field input, .mudarrib-contact .cf-field textarea { width: 100%; background: var(--mud-bg); border: 1px solid var(--mud-border); border-radius: 12px; padding: 14px 16px; color: var(--mud-primary); font-size: 0.95rem; }
+.mudarrib-contact .cf-field input::placeholder, .mudarrib-contact .cf-field textarea::placeholder { color: var(--mud-muted); }
+.mudarrib-contact .cf-field input:focus, .mudarrib-contact .cf-field textarea:focus { outline: none; border-color: var(--mud-primary); }
+.mudarrib-contact .cf-submit { width: 100%; padding: 15px; background: var(--mud-primary); color: #000; border: none; border-radius: 14px; font-weight: 900; font-size: 1rem; cursor: pointer; }
+/* shape 2: طرق تواصل */
+.mudarrib-contact[data-shape="2"] .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mudarrib-contact[data-shape="2"] .contact-method { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 20px; padding: 28px; text-align: center; transition: all 0.3s; }
+.mudarrib-contact[data-shape="2"] .contact-method:hover { border-color: var(--mud-primary); transform: translateY(-4px); }
+.mudarrib-contact[data-shape="2"] .ic { font-size: 2.4rem; margin-bottom: 14px; }
+.mudarrib-contact[data-shape="2"] h4 { font-size: 1.05rem; margin-bottom: 6px; }
+.mudarrib-contact[data-shape="2"] p { color: var(--mud-muted); font-size: 0.9rem; }
+
+@media (max-width: 900px) {
+  .mudarrib-faq .faq-grid, .mudarrib-contact[data-shape="2"] .contact-grid { grid-template-columns: 1fr; }
+  .mudarrib-cta[data-shape="2"] .cta-split { flex-direction: column; text-align: center; }
+}

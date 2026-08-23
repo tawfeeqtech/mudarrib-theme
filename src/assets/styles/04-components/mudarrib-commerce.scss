@@ -1,0 +1,93 @@
+// ============================================================
+// ثيم مدرّب — أقسام البيع (Programs / Pricing / Comparison / Promo / Countdown)
+// ============================================================
+
+/* ---------- برامج التدريب (Programs) ---------- */
+.mudarrib-programs .prog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mudarrib-programs .prog-card { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 20px; overflow: hidden; transition: all 0.3s; }
+.mudarrib-programs .prog-card:hover { border-color: var(--mud-primary); transform: translateY(-5px); }
+.mudarrib-programs .prog-img { height: 160px; background: var(--mud-glow); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+.mudarrib-programs .prog-body { padding: 20px; }
+.mudarrib-programs h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.mudarrib-programs .dur { color: var(--mud-primary); font-size: 0.85rem; font-weight: 700; }
+.mudarrib-programs p { color: var(--mud-muted); font-size: 0.88rem; margin-top: 8px; line-height: 1.6; }
+/* shape 2: قائمة */
+.mudarrib-programs[data-shape="2"] .prog-grid { grid-template-columns: 1fr; }
+.mudarrib-programs[data-shape="2"] .prog-row { display: flex; align-items: center; gap: 18px; background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 16px; padding: 18px 22px; }
+.mudarrib-programs[data-shape="2"] .prog-ic { font-size: 2rem; width: 54px; height: 54px; border-radius: 14px; background: var(--mud-glow); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.mudarrib-programs[data-shape="2"] .prog-info { flex: 1; }
+.mudarrib-programs[data-shape="2"] .tag { background: var(--mud-glow); color: var(--mud-primary); border: 1px solid var(--mud-primary); padding: 4px 14px; border-radius: 50px; font-size: 0.78rem; font-weight: 700; white-space: nowrap; }
+
+/* ---------- الباقات (Pricing) ---------- */
+.mudarrib-pricing .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mudarrib-pricing .price-card { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 24px; padding: 32px 26px; text-align: center; position: relative; transition: all 0.3s; }
+.mudarrib-pricing .price-card:hover { transform: translateY(-6px); }
+.mudarrib-pricing .price-card.popular { border-color: var(--mud-primary); box-shadow: 0 0 30px var(--mud-glow); }
+.mudarrib-pricing .pop-badge { position: absolute; top: -13px; right: 50%; transform: translateX(50%); background: var(--mud-primary); color: #000; padding: 4px 18px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; white-space: nowrap; }
+.mudarrib-pricing h3 { font-size: 1.2rem; margin-bottom: 4px; }
+.mudarrib-pricing .p-sub { color: var(--mud-muted); font-size: 0.85rem; margin-bottom: 20px; }
+.mudarrib-pricing .p-amount { font-size: 2.6rem; font-weight: 900; color: var(--mud-primary); }
+.mudarrib-pricing .p-currency { font-size: 1rem; color: var(--mud-muted); }
+.mudarrib-pricing ul { list-style: none; margin: 22px 0; text-align: right; }
+.mudarrib-pricing ul li { display: flex; align-items: center; gap: 10px; color: var(--mud-muted); font-size: 0.9rem; margin-bottom: 12px; }
+.mudarrib-pricing ul li .ck { color: var(--mud-primary); font-weight: 900; }
+.mudarrib-pricing .p-buy { width: 100%; padding: 14px; background: var(--mud-primary); color: #000; border: none; border-radius: 14px; font-weight: 900; font-size: 1rem; cursor: pointer; transition: all 0.25s; }
+.mudarrib-pricing .p-buy:hover { background: var(--mud-primary-bright); transform: translateY(-2px); }
+/* shape 2: بطاقة مفردة */
+.mudarrib-pricing[data-shape="2"] .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+.mudarrib-pricing[data-shape="2"] .price-single { background: var(--mud-card); border: 1px solid var(--mud-primary); border-radius: 26px; overflow: hidden; }
+.mudarrib-pricing[data-shape="2"] .ps-img { height: 220px; background: var(--mud-glow); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+.mudarrib-pricing[data-shape="2"] .ps-body { padding: 30px 25px; text-align: center; }
+/* shape 3: أشرطة أفقية */
+.mudarrib-pricing[data-shape="3"] .pricing-grid { grid-template-columns: 1fr; }
+.mudarrib-pricing[data-shape="3"] .price-bar { display: flex; align-items: center; gap: 20px; background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 18px; padding: 22px 26px; }
+.mudarrib-pricing[data-shape="3"] .price-bar.popular { border-color: var(--mud-primary); }
+.mudarrib-pricing[data-shape="3"] .pb-name { flex: 1; }
+.mudarrib-pricing[data-shape="3"] .pb-price { font-size: 1.6rem; font-weight: 900; color: var(--mud-primary); }
+.mudarrib-pricing[data-shape="3"] .pb-btn { padding: 10px 24px; background: var(--mud-primary); color: #000; border: none; border-radius: 30px; font-weight: 800; cursor: pointer; }
+
+/* ---------- جدول مقارنة (Comparison) ---------- */
+.mudarrib-compare table { width: 100%; border-collapse: collapse; }
+.mudarrib-compare th, .mudarrib-compare td { padding: 16px 18px; text-align: center; border-bottom: 1px solid var(--mud-border); }
+.mudarrib-compare th { color: var(--mud-muted); font-size: 0.9rem; font-weight: 700; }
+.mudarrib-compare td:first-child { text-align: right; font-weight: 600; }
+.mudarrib-compare .yes { color: var(--mud-primary); font-weight: 900; }
+.mudarrib-compare .no { color: var(--mud-muted); opacity: 0.5; }
+.mudarrib-compare .highlight-col { background: var(--mud-glow); }
+/* shape 2: صفوف */
+.mudarrib-compare[data-shape="2"] .cmp-row { display: flex; align-items: center; justify-content: space-between; background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 14px; padding: 16px 20px; margin-bottom: 12px; }
+.mudarrib-compare[data-shape="2"] .cmp-row .f { font-weight: 600; }
+.mudarrib-compare[data-shape="2"] .vals { display: flex; gap: 30px; }
+.mudarrib-compare[data-shape="2"] .v { color: var(--mud-muted); min-width: 60px; text-align: center; }
+.mudarrib-compare[data-shape="2"] .v.yes { color: var(--mud-primary); font-weight: 800; }
+
+/* ---------- كود خصم (Promo) ---------- */
+.mudarrib-promo .promo-box { background: linear-gradient(135deg, var(--mud-glow), var(--mud-card)); border: 1px dashed var(--mud-primary); border-radius: 24px; padding: 40px 30px; text-align: center; }
+.mudarrib-promo h3 { font-size: 1.6rem; margin-bottom: 8px; }
+.mudarrib-promo p { color: var(--mud-muted); margin-bottom: 20px; }
+.mudarrib-promo .promo-code { display: inline-block; background: var(--mud-bg); border: 1px solid var(--mud-primary); color: var(--mud-primary); padding: 14px 36px; border-radius: 14px; font-size: 1.5rem; font-weight: 900; letter-spacing: 3px; }
+/* shape 2: بانر أفقي */
+.mudarrib-promo[data-shape="2"] .promo-banner { display: flex; align-items: center; gap: 20px; background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 20px; padding: 26px 30px; }
+.mudarrib-promo[data-shape="2"] .ic { font-size: 3rem; }
+.mudarrib-promo[data-shape="2"] .txt { flex: 1; }
+.mudarrib-promo[data-shape="2"] .code { background: var(--mud-glow); color: var(--mud-primary); border: 1px solid var(--mud-primary); padding: 10px 22px; border-radius: 12px; font-weight: 900; font-size: 1.1rem; letter-spacing: 2px; }
+
+/* ---------- عرض محدود (Countdown) ---------- */
+.mudarrib-countdown .cd-box { background: var(--mud-card); border: 1px solid var(--mud-primary); border-radius: 24px; padding: 40px 30px; text-align: center; }
+.mudarrib-countdown h3 { font-size: 1.4rem; margin-bottom: 6px; }
+.mudarrib-countdown .cd-sub { color: var(--mud-muted); margin-bottom: 24px; }
+.mudarrib-countdown .cd-timer { display: flex; justify-content: center; gap: 16px; }
+.mudarrib-countdown .cd-unit { background: var(--mud-bg); border: 1px solid var(--mud-border); border-radius: 14px; padding: 16px 18px; min-width: 70px; }
+.mudarrib-countdown .cd-unit .n { font-size: 1.8rem; font-weight: 900; color: var(--mud-primary); display: block; }
+.mudarrib-countdown .cd-unit .l { color: var(--mud-muted); font-size: 0.78rem; }
+/* shape 2: شريط مضغوط */
+.mudarrib-countdown[data-shape="2"] .cd-strip { display: flex; align-items: center; justify-content: center; gap: 24px; background: linear-gradient(135deg, var(--mud-glow), transparent); border: 1px solid var(--mud-primary); border-radius: 16px; padding: 22px 28px; flex-wrap: wrap; }
+.mudarrib-countdown[data-shape="2"] .msg { font-weight: 800; }
+.mudarrib-countdown[data-shape="2"] .t { display: flex; gap: 12px; }
+.mudarrib-countdown[data-shape="2"] .seg { text-align: center; }
+.mudarrib-countdown[data-shape="2"] .seg .n { font-size: 1.5rem; font-weight: 900; color: var(--mud-primary); }
+.mudarrib-countdown[data-shape="2"] .seg .l { color: var(--mud-muted); font-size: 0.7rem; }
+
+@media (max-width: 900px) {
+  .mudarrib-programs .prog-grid, .mudarrib-pricing .pricing-grid { grid-template-columns: 1fr; }
+}

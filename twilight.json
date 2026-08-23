@@ -2006,6 +2006,1261 @@
             ],
             "key": "22649620-9fbe-486e-b7fa-e768abe7d137",
             "is_default": null
+        },
+        {
+            "path": "home.mudarrib-programs",
+            "title": {
+                "en": "Programs",
+                "ar": "برامج التدريب"
+            },
+            "icon": "sicon-list",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "بطاقات",
+                            "value": "1",
+                            "key": "prog-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "بطاقات",
+                            "value": "1",
+                            "key": "prog-shape-1"
+                        },
+                        {
+                            "label": "قائمة",
+                            "value": "2",
+                            "key": "prog-shape-2"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "برامج التدريب",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": false,
+                    "label": null,
+                    "item_label": "برنامج",
+                    "value": [
+                        {
+                            "items.icon": "⚽",
+                            "items.title": "برنامج كرة القدم",
+                            "items.duration": "8 أسابيع",
+                            "items.text": "تطوير السرعة والتحمل والجاهزية البدنية."
+                        },
+                        {
+                            "items.icon": "💪",
+                            "items.title": "بناء العضلات",
+                            "items.duration": "12 أسبوع",
+                            "items.text": "برنامج متكامل لبناء الكتلة العضلية."
+                        },
+                        {
+                            "items.icon": "🔥",
+                            "items.title": "حرق الدهون",
+                            "items.duration": "6 أسابيع",
+                            "items.text": "خفض نسبة الدهون ورفع اللياقة."
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-emoji",
+                            "label": "الأيقونة",
+                            "id": "items.icon",
+                            "value": "⚽",
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "العنوان",
+                            "multilanguage": true,
+                            "id": "items.title",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "المدة",
+                            "id": "items.duration",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "الوصف",
+                            "multilanguage": true,
+                            "id": "items.text",
+                            "value": null,
+                            "format": "textarea",
+                            "required": false
+                        }
+                    ]
+                }
+            ],
+            "key": "25d0bb05-c0a3-491b-98bb-12f4b82c986d",
+            "is_default": null
+        },
+        {
+            "path": "home.mudarrib-pricing",
+            "title": {
+                "en": "Pricing",
+                "ar": "الباقات"
+            },
+            "icon": "sicon-bag",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "3 بطاقات",
+                            "value": "1",
+                            "key": "price-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "3 بطاقات",
+                            "value": "1",
+                            "key": "price-shape-1"
+                        },
+                        {
+                            "label": "بطاقة مفردة",
+                            "value": "2",
+                            "key": "price-shape-2"
+                        },
+                        {
+                            "label": "أشرطة أفقية",
+                            "value": "3",
+                            "key": "price-shape-3"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "اختر باقتك",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "العملة",
+                    "id": "currency",
+                    "value": "ريال",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "نص الزر",
+                    "id": "btn_label",
+                    "value": "اشترك الآن",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "شارة الأكثر طلباً",
+                    "id": "popular_label",
+                    "value": "الأكثر طلباً",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": false,
+                    "label": null,
+                    "item_label": "باقة",
+                    "value": [
+                        {
+                            "items.name": "أساسية",
+                            "items.period": "4 أسابيع",
+                            "items.price": "199",
+                            "items.popular": false,
+                            "items.features_text": "جدول تدريب أسبوعي\nمتابعة أسبوعية\nملف PDF"
+                        },
+                        {
+                            "items.name": "تطوير",
+                            "items.period": "8 أسابيع",
+                            "items.price": "349",
+                            "items.popular": true,
+                            "items.features_text": "كل مميزات الأساسية\nمتابعة يومية\nفيديوهات شرح"
+                        },
+                        {
+                            "items.name": "احتراف",
+                            "items.period": "12 أسبوع",
+                            "items.price": "599",
+                            "items.popular": false,
+                            "items.features_text": "كل مميزات التطوير\nخطة غذائية كاملة\nتواصل مباشر"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "الاسم",
+                            "multilanguage": true,
+                            "id": "items.name",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "المدة",
+                            "id": "items.period",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "السعر",
+                            "id": "items.price",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "boolean",
+                            "icon": "sicon-toggle-off",
+                            "label": "الأكثر طلباً",
+                            "id": "items.popular",
+                            "format": "switch",
+                            "required": false,
+                            "value": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "المميزات (كل سطر ميزة)",
+                            "multilanguage": true,
+                            "id": "items.features_text",
+                            "value": null,
+                            "format": "textarea",
+                            "required": false
+                        }
+                    ]
+                }
+            ],
+            "key": "408e2208-9b87-499d-b8fc-09d31ad8dd99",
+            "is_default": null
+        },
+        {
+            "path": "home.mudarrib-comparison",
+            "title": {
+                "en": "Comparison",
+                "ar": "جدول مقارنة"
+            },
+            "icon": "sicon-table",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "جدول كامل",
+                            "value": "1",
+                            "key": "cmp-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "جدول كامل",
+                            "value": "1",
+                            "key": "cmp-shape-1"
+                        },
+                        {
+                            "label": "صفوف",
+                            "value": "2",
+                            "key": "cmp-shape-2"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "قارن الباقات",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "أسماء الباقات (مفصولة بفاصلة)",
+                    "id": "columns_text",
+                    "value": "أساسية,تطوير,احتراف",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "المميزات (كل سطر: الاسم=قيم 1/0)",
+                    "id": "rows_text",
+                    "value": "جدول تدريب=1,1,1\nمتابعة يومية=0,1,1\nخطة غذائية=0,0,1",
+                    "format": "textarea",
+                    "required": false
+                }
+            ],
+            "key": "bc1523be-5817-4a7f-bd6a-6ba121f73f0d",
+            "is_default": null
+        },
+        {
+            "path": "home.mudarrib-promo",
+            "title": {
+                "en": "Promo",
+                "ar": "كود خصم"
+            },
+            "icon": "sicon-gift",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "صندوق مركزي",
+                            "value": "1",
+                            "key": "promo-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "صندوق مركزي",
+                            "value": "1",
+                            "key": "promo-shape-1"
+                        },
+                        {
+                            "label": "بانر أفقي",
+                            "value": "2",
+                            "key": "promo-shape-2"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "خصم خاص لمتابعيني 🎁",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "النص",
+                    "id": "text",
+                    "value": "استخدم الكود عند الدفع واحصل على خصم",
+                    "format": "text",
+                    "required": false,
+                    "multilanguage": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الكود",
+                    "id": "code",
+                    "value": "COACH20",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الأيقونة",
+                    "id": "icon",
+                    "value": "🎁",
+                    "format": "text",
+                    "required": false
+                }
+            ],
+            "key": "ae6bafa2-028c-4ba6-8673-99f6d39748c4",
+            "is_default": null
+        },
+        {
+            "path": "home.mudarrib-countdown",
+            "title": {
+                "en": "Countdown",
+                "ar": "عرض محدود"
+            },
+            "icon": "sicon-clock",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "صندوق مؤقت",
+                            "value": "1",
+                            "key": "cd-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "صندوق مؤقت",
+                            "value": "1",
+                            "key": "cd-shape-1"
+                        },
+                        {
+                            "label": "شريط مضغوط",
+                            "value": "2",
+                            "key": "cd-shape-2"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "⚡ عرض محدود ينتهي قريباً",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "النص",
+                    "id": "text",
+                    "value": "",
+                    "format": "text",
+                    "required": false,
+                    "multilanguage": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الأيام",
+                    "id": "days",
+                    "value": "02",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الساعات",
+                    "id": "hours",
+                    "value": "14",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الدقائق",
+                    "id": "mins",
+                    "value": "35",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الثواني",
+                    "id": "secs",
+                    "value": "20",
+                    "format": "text",
+                    "required": false
+                }
+            ],
+            "key": "a1fc2fb3-76c3-463e-a188-06aace382ea1",
+            "is_default": null
+        },
+        {
+            "path": "home.mudarrib-testimonials",
+            "title": {
+                "en": "Testimonials",
+                "ar": "آراء الأبطال"
+            },
+            "icon": "sicon-comment",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "سلايدر",
+                            "value": "1",
+                            "key": "testi-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "سلايدر",
+                            "value": "1",
+                            "key": "testi-shape-1"
+                        },
+                        {
+                            "label": "شبكة",
+                            "value": "2",
+                            "key": "testi-shape-2"
+                        },
+                        {
+                            "label": "بطاقة مركزية",
+                            "value": "3",
+                            "key": "testi-shape-3"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "ماذا يقول الأبطال؟",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": false,
+                    "label": null,
+                    "item_label": "رأي",
+                    "value": [
+                        {
+                            "items.stars": "5",
+                            "items.comment": "أفضل قرار اتخذته لتطوير أدائي البدني.",
+                            "items.name": "عبدالله خ.",
+                            "items.role": "لاعب كرة قدم"
+                        },
+                        {
+                            "items.stars": "5",
+                            "items.comment": "احترافية عالية ومتابعة يومية.",
+                            "items.name": "تركي السبيعي",
+                            "items.role": "لاعب كرة قدم"
+                        },
+                        {
+                            "items.stars": "5",
+                            "items.comment": "برنامج واضح وسهل الالتزام.",
+                            "items.name": "محمد العتيبي",
+                            "items.role": "لاعب كرة قدم"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "التقييم (1-5)",
+                            "id": "items.stars",
+                            "value": "5",
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "التعليق",
+                            "multilanguage": true,
+                            "id": "items.comment",
+                            "value": null,
+                            "format": "textarea",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "الاسم",
+                            "id": "items.name",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "الصفة",
+                            "id": "items.role",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        }
+                    ]
+                }
+            ],
+            "key": "311574b6-1fb6-49d9-8404-a689db1a1868",
+            "is_default": null
+        },
+        {
+            "path": "home.mudarrib-results",
+            "title": {
+                "en": "Results",
+                "ar": "نتائج اللاعبين"
+            },
+            "icon": "sicon-chart",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "بطاقات",
+                            "value": "1",
+                            "key": "res-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "بطاقات",
+                            "value": "1",
+                            "key": "res-shape-1"
+                        },
+                        {
+                            "label": "أشرطة تقدم",
+                            "value": "2",
+                            "key": "res-shape-2"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "نتائج اللاعبين",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": false,
+                    "label": null,
+                    "item_label": "نتيجة",
+                    "value": [
+                        {
+                            "items.icon": "🏃",
+                            "items.title": "تحسين السرعة",
+                            "items.metric": "+40%",
+                            "items.detail": "خلال 8 أسابيع",
+                            "items.percent": "80"
+                        },
+                        {
+                            "items.icon": "💪",
+                            "items.title": "زيادة القوة",
+                            "items.metric": "+35%",
+                            "items.detail": "خلال 12 أسبوع",
+                            "items.percent": "70"
+                        },
+                        {
+                            "items.icon": "🔥",
+                            "items.title": "خفض الدهون",
+                            "items.metric": "-12 كجم",
+                            "items.detail": "خلال 6 أسابيع",
+                            "items.percent": "90"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-emoji",
+                            "label": "الأيقونة",
+                            "id": "items.icon",
+                            "value": "🏃",
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "العنوان",
+                            "multilanguage": true,
+                            "id": "items.title",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "النتيجة",
+                            "id": "items.metric",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "التفاصيل",
+                            "id": "items.detail",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "النسبة (للشكل الثاني)",
+                            "id": "items.percent",
+                            "value": "70",
+                            "format": "text",
+                            "required": false
+                        }
+                    ]
+                }
+            ],
+            "key": "aae87508-4351-4c6d-b895-1996e16ba861",
+            "is_default": null
+        },
+        {
+            "path": "home.mudarrib-gallery",
+            "title": {
+                "en": "Gallery",
+                "ar": "ألبوم الأبطال"
+            },
+            "icon": "sicon-image",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "شبكة",
+                            "value": "1",
+                            "key": "gal-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "شبكة",
+                            "value": "1",
+                            "key": "gal-shape-1"
+                        },
+                        {
+                            "label": "سلايدر أفقي",
+                            "value": "2",
+                            "key": "gal-shape-2"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "ألبوم الرياضيين",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": false,
+                    "label": null,
+                    "item_label": "صورة",
+                    "value": [
+                        {
+                            "items.image": null,
+                            "items.icon": "🏆"
+                        },
+                        {
+                            "items.image": null,
+                            "items.icon": "🥇"
+                        },
+                        {
+                            "items.image": null,
+                            "items.icon": "🏅"
+                        },
+                        {
+                            "items.image": null,
+                            "items.icon": "⚽"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-image",
+                            "label": "الصورة",
+                            "id": "items.image",
+                            "value": null,
+                            "format": "image",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-emoji",
+                            "label": "الأيقونة (بديل الصورة)",
+                            "id": "items.icon",
+                            "value": "🏆",
+                            "format": "text",
+                            "required": false
+                        }
+                    ]
+                }
+            ],
+            "key": "c8051e23-e204-4b53-a25c-9c273ee903eb",
+            "is_default": null
+        },
+        {
+            "path": "home.mudarrib-before-after",
+            "title": {
+                "en": "Before/After",
+                "ar": "سلايدر تحوّل"
+            },
+            "icon": "sicon-refresh",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "مقارنة منزلقة",
+                            "value": "1",
+                            "key": "ba-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "مقارنة منزلقة",
+                            "value": "1",
+                            "key": "ba-shape-1"
+                        },
+                        {
+                            "label": "بطاقتان",
+                            "value": "2",
+                            "key": "ba-shape-2"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "قبل وبعد",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "شارة قبل",
+                    "id": "before_label",
+                    "value": "قبل",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "شارة بعد",
+                    "id": "after_label",
+                    "value": "بعد",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "الأيقونة",
+                    "id": "icon",
+                    "value": "🏋️",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-image",
+                    "label": "صورة قبل",
+                    "id": "before_image",
+                    "value": null,
+                    "format": "image",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-image",
+                    "label": "صورة بعد",
+                    "id": "after_image",
+                    "value": null,
+                    "format": "image",
+                    "required": false
+                }
+            ],
+            "key": "6d559915-b57d-4192-94e5-561b038e7b38",
+            "is_default": null
+        },
+        {
+            "path": "home.mudarrib-faq",
+            "title": {
+                "en": "FAQ",
+                "ar": "الأسئلة الشائعة"
+            },
+            "icon": "sicon-question",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "عمودان",
+                            "value": "1",
+                            "key": "faq-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "عمودان",
+                            "value": "1",
+                            "key": "faq-shape-1"
+                        },
+                        {
+                            "label": "عمود واحد",
+                            "value": "2",
+                            "key": "faq-shape-2"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "الأسئلة الشائعة",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": false,
+                    "label": null,
+                    "item_label": "سؤال",
+                    "value": [
+                        {
+                            "items.question": "هل البرنامج يناسبني؟",
+                            "items.answer": "نعم، مصمم ليتناسب مع مختلف المستويات."
+                        },
+                        {
+                            "items.question": "هل فيه متابعة؟",
+                            "items.answer": "نعم، متابعة مستمرة لضمان التزامك."
+                        },
+                        {
+                            "items.question": "متى أشوف نتائج؟",
+                            "items.answer": "غالباً خلال أول 2-4 أسابيع."
+                        },
+                        {
+                            "items.question": "كم مدة البرنامج؟",
+                            "items.answer": "حسب الباقة: 4 أو 8 أو 12 أسبوعاً."
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "السؤال",
+                            "multilanguage": true,
+                            "id": "items.question",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "الإجابة",
+                            "multilanguage": true,
+                            "id": "items.answer",
+                            "value": null,
+                            "format": "textarea",
+                            "required": false
+                        }
+                    ]
+                }
+            ],
+            "key": "f49229dc-0e8d-4b3b-a7d5-d2caf3c76533",
+            "is_default": null
+        },
+        {
+            "path": "home.mudarrib-cta",
+            "title": {
+                "en": "CTA",
+                "ar": "دعوة نهائية"
+            },
+            "icon": "sicon-arrow-left",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "صندوق مركزي",
+                            "value": "1",
+                            "key": "cta-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "صندوق مركزي",
+                            "value": "1",
+                            "key": "cta-shape-1"
+                        },
+                        {
+                            "label": "منقسم",
+                            "value": "2",
+                            "key": "cta-shape-2"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "جاهز تبدأ رحلتك؟",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "النص",
+                    "id": "text",
+                    "value": "لا تؤجل هدفك أكثر. ابدأ اليوم بخطة تدريب مخصصة.",
+                    "format": "text",
+                    "required": false,
+                    "multilanguage": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "نص الزر",
+                    "id": "btn_label",
+                    "value": "ابدأ الآن",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-link",
+                    "label": "رابط الزر",
+                    "id": "btn_url",
+                    "value": null,
+                    "format": "url",
+                    "required": false
+                }
+            ],
+            "key": "ad388724-bfde-4307-9938-01782494c05e",
+            "is_default": null
+        },
+        {
+            "path": "home.mudarrib-contact",
+            "title": {
+                "en": "Contact",
+                "ar": "تواصل"
+            },
+            "icon": "sicon-mail",
+            "fields": [
+                {
+                    "id": "shape",
+                    "type": "items",
+                    "format": "dropdown-list",
+                    "label": "الشكل",
+                    "icon": "sicon-layout-grid-rearrange",
+                    "selected": [
+                        {
+                            "label": "نموذج",
+                            "value": "1",
+                            "key": "contact-shape-1"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "نموذج",
+                            "value": "1",
+                            "key": "contact-shape-1"
+                        },
+                        {
+                            "label": "طرق تواصل",
+                            "value": "2",
+                            "key": "contact-shape-2"
+                        }
+                    ],
+                    "source": "Manual",
+                    "required": true
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-format-text-alt",
+                    "label": "العنوان",
+                    "multilanguage": true,
+                    "id": "title",
+                    "value": "تواصل معي",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "type": "string",
+                    "icon": "sicon-typography",
+                    "label": "نص الزر",
+                    "id": "btn_label",
+                    "value": "إرسال",
+                    "format": "text",
+                    "required": false
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": false,
+                    "label": null,
+                    "item_label": "طريقة",
+                    "value": [
+                        {
+                            "items.icon": "💬",
+                            "items.title": "واتساب",
+                            "items.text": "رد سريع خلال ساعات"
+                        },
+                        {
+                            "items.icon": "📸",
+                            "items.title": "انستغرام",
+                            "items.text": "تابعني وتواصل مباشر"
+                        },
+                        {
+                            "items.icon": "📧",
+                            "items.title": "البريد",
+                            "items.text": "للاستفسارات الرسمية"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "type": "string",
+                            "icon": "sicon-emoji",
+                            "label": "الأيقونة",
+                            "id": "items.icon",
+                            "value": "💬",
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-format-text-alt",
+                            "label": "العنوان",
+                            "multilanguage": true,
+                            "id": "items.title",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        },
+                        {
+                            "type": "string",
+                            "icon": "sicon-typography",
+                            "label": "النص",
+                            "multilanguage": true,
+                            "id": "items.text",
+                            "value": null,
+                            "format": "text",
+                            "required": false
+                        }
+                    ]
+                }
+            ],
+            "key": "533c6340-3962-480e-8a7b-73a90ddf6e48",
+            "is_default": null
         }
     ],
     "support_url": "https://salla.com/",

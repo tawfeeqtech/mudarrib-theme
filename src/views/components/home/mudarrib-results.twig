@@ -1,0 +1,25 @@
+{#
+| component.shape | 1=بطاقات, 2=أشرطة تقدم |
+| component.items | (icon, title, metric, detail, percent) |
+#}
+<section class="s-block mudarrib-results container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('نتائج اللاعبين') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    {% if component.shape|default('1') == '1' %}
+        <div class="results-grid">
+            {% for item in component.items|default([]) %}
+                <div class="result-card"><div class="r-img">{{ item.icon|default('🏃') }}</div><div class="r-body"><h4>{{ item.title }}</h4><div class="r-metric">{{ item.metric }}</div><div class="r-detail">{{ item.detail }}</div></div></div>
+            {% endfor %}
+        </div>
+    {% else %}
+        {% for item in component.items|default([]) %}
+            <div class="res-row">
+                <div class="avatar">{{ item.title|first|default('ع') }}</div>
+                <div class="info"><h4>{{ item.title }}</h4><div class="progress"><div class="fill" style="width:{{ item.percent|default(70) }}%"></div></div></div>
+                <span class="pct">{{ item.metric }}</span>
+            </div>
+        {% endfor %}
+    {% endif %}
+</section>

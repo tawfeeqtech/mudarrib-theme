@@ -1,0 +1,17 @@
+{#
+| component.shape | 1=صندوق مركزي, 2=منقسم |
+#}
+<section class="s-block mudarrib-cta container" data-shape="{{ component.shape|default('1') }}">
+    {% if component.shape|default('1') == '1' %}
+        <div class="cta-box">
+            <h2>{{ component.title|default('جاهز تبدأ رحلتك؟') }}</h2>
+            <p>{{ component.text|default('لا تؤجل هدفك أكثر. ابدأ اليوم بخطة تدريب مخصصة.') }}</p>
+            <a href="{{ component.btn_url|default('#') }}" class="hero-btn" style="margin-top:0">{{ component.btn_label|default('ابدأ الآن') }}</a>
+        </div>
+    {% else %}
+        <div class="cta-split">
+            <div class="txt"><h3>{{ component.title|default('جاهز تبدأ رحلتك؟') }}</h3><p>{{ component.text|default('') }}</p></div>
+            <a href="{{ component.btn_url|default('#') }}" class="hero-btn" style="margin-top:0">{{ component.btn_label|default('ابدأ الآن') }}</a>
+        </div>
+    {% endif %}
+</section>
