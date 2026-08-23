@@ -666,8 +666,9 @@
                     "label": "رابط الزر",
                     "id": "btn_url",
                     "value": null,
-                    "format": "url",
-                    "required": false
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "ضع رابط https://..."
                 },
                 {
                     "type": "string",
@@ -3225,8 +3226,9 @@
                     "label": "رابط الزر",
                     "id": "btn_url",
                     "value": null,
-                    "format": "url",
-                    "required": false
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "ضع رابط https://..."
                 }
             ],
             "key": "ad388724-bfde-4307-9938-01782494c05e",
@@ -3743,8 +3745,9 @@
                     "label": "رابط الفيديو",
                     "id": "video_url",
                     "value": null,
-                    "format": "url",
-                    "required": false
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "ضع رابط https://..."
                 },
                 {
                     "type": "string",
@@ -4766,8 +4769,9 @@
                     "label": "الرابط",
                     "id": "url",
                     "value": null,
-                    "format": "url",
-                    "required": false
+                    "format": "text",
+                    "required": false,
+                    "placeholder": "ضع رابط https://..."
                 }
             ],
             "key": "07b361f5-8756-41ec-b429-3e5ee599e137",
