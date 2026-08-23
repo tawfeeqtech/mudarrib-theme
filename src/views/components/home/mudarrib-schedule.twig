@@ -1,6 +1,7 @@
 {#
 | component.shape | 1=جدول, 2=بطاقات أيام |
-| component.rows | (day, slots[]) حيث slot=(time, name, booked) |
+| component.times_text | أوقات الحصص مفصولة بفاصلة |
+| component.items | (day, slots_text) حيث slots_text كل سطر: الوقت=الاسم=1/0 |
 #}
 <section class="s-block mudarrib-schedule container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
@@ -9,16 +10,35 @@
     </div>
     {% if component.shape|default('1') == '1' %}
         <table class="sched-table">
-            <tr><th>اليوم</th>{% for t in component.times|default(['6 صباحاً','4 عصراً','8 مساءً']) %}<th>{{ t }}</th>{% endfor %}</tr>
-            {% for row in component.rows|default([]) %}
-                <tr><td>{{ row.day }}</td>{% for s in row.slots|default([]) %}<td class="{{ s.booked ? 'booked' : '' }}">{{ s.name ?: '—' }}</td>{% endfor %}</tr>
+            <tr><th>اليوم</th>{% for t in component.times_text|default('6 صباحاً,4 عصراً,8 مساءً')|split(',') %}{% if t|trim %}<th>{{ t|trim }}</th>{% endif %}{% endfor %}</tr>
+            {% for row in component.items|default([]) %}
+                <tr>
+                    <td>{{ row.day }}</td>
+                    {% for line in row.slots_text|default('')|split('\n') %}
+                        {% set parts = line|split('=') %}
+                        {% if parts|length > 1 %}
+                            {% set is_booked = parts[2]|default('0')|trim == '1' %}
+                            <td class="{{ is_booked ? 'booked' : '' }}">{{ parts[1]|trim ?: '—' }}</td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
             {% endfor %}
         </table>
         {% if component.note %}<p class="sched-note">{{ component.note }}</p>{% endif %}
     {% else %}
         <div class="sched-grid">
-            {% for row in component.rows|default([]) %}
-                <div class="day-card"><h4>{{ row.day }}</h4><ul>{% for s in row.slots|default([]) %}{% if s.name %}<li>{{ s.time }} — {{ s.name }}</li>{% endif %}{% endfor %}</ul></div>
+            {% for row in component.items|default([]) %}
+                <div class="day-card">
+                    <h4>{{ row.day }}</h4>
+                    <ul>
+                        {% for line in row.slots_text|default('')|split('\n') %}
+                            {% set parts = line|split('=') %}
+                            {% if parts|length > 1 and parts[1]|trim %}
+                                <li>{{ parts[0]|trim }} — {{ parts[1]|trim }}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
             {% endfor %}
         </div>
     {% endif %}

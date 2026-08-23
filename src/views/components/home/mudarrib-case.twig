@@ -1,7 +1,7 @@
 {#
 | component.shape | 1=كاملة, 2=مختصرة |
 | component.tag / name / story / image_icon |
-| component.metrics | (value, label) |
+| component.items | (value, label) — المقاييس |
 #}
 <section class="s-block mudarrib-case container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
@@ -16,9 +16,9 @@
             <div class="case-tag">{{ component.tag|default('قصة نجاح') }}</div>
             <h3>{{ component.name|default('') }}</h3>
             <p>{{ component.story|default('') }}</p>
-            {% if component.metrics %}
+            {% if component.items %}
                 <div class="case-metrics">
-                    {% for m in component.metrics %}<div class="m"><div class="v">{{ m.value }}</div><div class="l">{{ m.label }}</div></div>{% endfor %}
+                    {% for m in component.items %}<div class="m"><div class="v">{{ m.value }}</div><div class="l">{{ m.label }}</div></div>{% endfor %}
                 </div>
             {% endif %}
         </div>

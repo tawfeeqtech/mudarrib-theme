@@ -1,6 +1,6 @@
 {#
 | component.shape | 1=نموذج, 2=بنتيجة بارزة |
-| component.fields | (label, options[]) |
+| component.items | (label, options_text) حيث options_text كل سطر خيار |
 | component.result_price / result_label |
 #}
 <section class="s-block mudarrib-calc container" data-shape="{{ component.shape|default('1') }}">
@@ -9,7 +9,7 @@
         <div class="line-glow"></div>
     </div>
     <div class="calc-box">
-        {% for f in component.fields|default([]) %}
+        {% for f in component.items|default([]) %}
             <div class="calc-field">
                 <label>{{ f.label }}</label>
                 <div class="mud-select" data-placeholder="{{ f.placeholder|default('اختر') }}">
@@ -18,8 +18,8 @@
                         <svg class="mud-select__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                     <div class="mud-select__menu">
-                        {% for opt in f.options|default([]) %}
-                            <div class="mud-select__option" data-value="{{ opt }}">{{ opt }}</div>
+                        {% for opt in f.options_text|default('')|split('\n') %}
+                            {% if opt|trim %}<div class="mud-select__option" data-value="{{ opt|trim }}">{{ opt|trim }}</div>{% endif %}
                         {% endfor %}
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 {#
 | component.shape | 1=أسئلة كاملة, 2=خطوات |
-| component.questions | (question, options[]) |
+| component.items | (question, options_text) حيث options_text كل سطر خيار |
 #}
 <section class="s-block mudarrib-quiz container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
@@ -10,15 +10,15 @@
     <div class="quiz-box">
         {% if component.shape|default('1') == '2' %}
             <div class="quiz-stepbar">
-                {% for q in component.questions|default([]) %}<div class="quiz-step {% if loop.first %}active{% endif %}"></div>{% endfor %}
+                {% for q in component.items|default([]) %}<div class="quiz-step {% if loop.first %}active{% endif %}"></div>{% endfor %}
             </div>
         {% endif %}
-        {% for q in component.questions|default([]) %}
+        {% for q in component.items|default([]) %}
             <div class="quiz-q">
                 <h4>{{ q.question }}</h4>
                 <div class="quiz-opts">
-                    {% for opt in q.options|default([]) %}
-                        <div class="quiz-opt">{{ opt }}</div>
+                    {% for opt in q.options_text|default('')|split('\n') %}
+                        {% if opt|trim %}<div class="quiz-opt">{{ opt|trim }}</div>{% endif %}
                     {% endfor %}
                 </div>
             </div>

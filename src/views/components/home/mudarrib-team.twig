@@ -16,7 +16,7 @@
     {% else %}
         <div style="max-width:800px">
             {% for item in component.items|default([]) %}
-                <div class="mudarrib-ach"><div class="ach-row"><span class="medal">{{ item.image_icon|default('👨‍🏫') }}</span><h4>{{ item.name }}</h4><span class="val">{{ item.role }}</span></div></div>
+                <div class="ach-row"><span class="medal">{{ item.image_icon|default('👨‍🏫') }}</span><h4>{{ item.name }}</h4><span class="val">{{ item.role }}</span></div>
             {% endfor %}
         </div>
     {% endif %}
