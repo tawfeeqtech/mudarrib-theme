@@ -1,0 +1,51 @@
+// ============================================================
+// ثيم مدرّب — تلوين بطاقة المنتج وصفحة المنتج بالهوية الداكنة
+// يستهدف salla-product-card + custom-salla-product-card معاً
+// ============================================================
+
+/* بطاقة المنتج — خلفية داكنة بالهوية */
+body.theme-mudarrib salla-product-card,
+body.theme-mudarrib custom-salla-product-card {
+  .s-product-card-entry {
+    background-color: var(--mud-card) !important;
+    border: 1px solid var(--mud-border);
+    border-radius: 16px;
+  }
+  .s-product-card-image {
+    background-color: var(--mud-bg-alt);
+  }
+  .s-product-card-content-title a {
+    color: var(--mud-primary);
+  }
+  .s-product-card-content-subtitle {
+    color: var(--mud-muted);
+  }
+  .s-product-card-price {
+    color: var(--mud-primary);
+  }
+  .s-product-card-sale-price h4 {
+    color: var(--mud-primary);
+  }
+}
+
+/* صفحة المنتج — خلفية داكنة */
+body.theme-mudarrib main#main-content {
+  background-color: var(--mud-bg);
+  color: var(--mud-primary);
+}
+body.theme-mudarrib main#main-content h1 {
+  color: var(--mud-primary);
+}
+
+/* أزرار السلة والشراء بالهوية */
+body.theme-mudarrib salla-add-product-button .s-add-product-button-main salla-button {
+  background-color: var(--mud-primary) !important;
+  color: #000 !important;
+}
+
+/* توحيد خلفية صناديق صفحة المنتج */
+body.theme-mudarrib .container--product-details section.bg-white,
+body.theme-mudarrib .product__description {
+  background-color: var(--mud-card);
+  color: var(--mud-primary);
+}

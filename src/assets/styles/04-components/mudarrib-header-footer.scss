@@ -1,0 +1,85 @@
+// ============================================================
+// ثيم مدرّب — أشكال الهيدر والفوتر
+// body class: header-shape-default/transparent/mini + footer-shape-columns/mini
+// ============================================================
+
+/* ============ هيدر — افتراضي (داكن رياضي) ============ */
+body.header-shape-default .store-header .main-nav-container {
+  background-color: var(--mud-bg) !important;
+  border-bottom: 1px solid var(--mud-border);
+}
+body.header-shape-default .store-header .top-navbar {
+  background-color: var(--mud-bg-alt);
+  color: var(--mud-muted);
+}
+body.header-shape-default .store-header .navbar-brand img {
+  max-height: 48px;
+}
+
+/* ============ هيدر — شفاف فوق الهيرو ============ */
+body.header-shape-transparent .store-header .main-nav-container {
+  background: transparent !important;
+  border-bottom: none;
+  position: relative;
+  z-index: 100;
+}
+body.header-shape-transparent .store-header .top-navbar {
+  display: none;
+}
+/* يعطي hero الأول هامش سالب ليطفو الهيدر فوقه */
+body.header-shape-transparent main#main-content > *:first-child {
+  margin-top: -72px;
+}
+body.header-shape-transparent .store-header {
+  position: relative;
+}
+
+/* ============ هيدر — ميني ============ */
+body.header-shape-mini .store-header .top-navbar {
+  display: none;
+}
+body.header-shape-mini .store-header .main-nav-container {
+  background-color: var(--mud-bg) !important;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--mud-border);
+}
+body.header-shape-mini .store-header .navbar-brand img {
+  max-height: 40px;
+}
+body.header-shape-mini .store-header .main-nav-container .container {
+  padding: 0 12px;
+}
+
+/* ============ فوتر — 4 أعمدة (داكن) ============ */
+body.footer-shape-columns .store-footer {
+  background-color: var(--mud-bg-alt);
+  border-top: 1px solid var(--mud-border);
+  color: var(--mud-muted);
+}
+body.footer-shape-columns .store-footer h3 {
+  color: var(--mud-primary);
+}
+body.footer-shape-columns .store-footer .copyright-text {
+  color: var(--mud-muted);
+}
+
+/* ============ فوتر — مركزي مصغّر ============ */
+body.footer-shape-mini .store-footer {
+  background-color: var(--mud-bg-alt);
+  border-top: 1px solid var(--mud-border);
+  text-align: center;
+}
+body.footer-shape-mini .store-footer .store-footer__inner .grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+body.footer-shape-mini .store-footer h3 {
+  color: var(--mud-primary);
+  font-size: 1.4rem;
+}
+body.footer-shape-mini .store-footer .copyright-text {
+  color: var(--mud-muted);
+}

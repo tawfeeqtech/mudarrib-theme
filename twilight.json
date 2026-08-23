@@ -488,6 +488,91 @@
             "groups": [
                 "product-page"
             ]
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "header-shape-static",
+            "value": "<div style='background:#F2E5E3;border-radius:8px;padding:10px 14px;margin-bottom:14px;color:#6B4F4A;font-weight:bold;font-size:14px'>شكل الهيدر</div>",
+            "groups": [
+                "header"
+            ]
+        },
+        {
+            "id": "header_shape",
+            "type": "items",
+            "format": "dropdown-list",
+            "label": "شكل الهيدر",
+            "icon": "sicon-layout-header",
+            "selected": [
+                {
+                    "label": "افتراضي",
+                    "value": "default",
+                    "key": "header-shape-default"
+                }
+            ],
+            "options": [
+                {
+                    "label": "افتراضي",
+                    "value": "default",
+                    "key": "header-shape-default"
+                },
+                {
+                    "label": "شفاف فوق الهيرو",
+                    "value": "transparent",
+                    "key": "header-shape-transparent"
+                },
+                {
+                    "label": "ميني",
+                    "value": "mini",
+                    "key": "header-shape-mini"
+                }
+            ],
+            "source": "Manual",
+            "required": true,
+            "groups": [
+                "header"
+            ]
+        },
+        {
+            "type": "static",
+            "format": "title",
+            "id": "footer-shape-static",
+            "value": "<div style='background:#F2E5E3;border-radius:8px;padding:10px 14px;margin-bottom:14px;color:#6B4F4A;font-weight:bold;font-size:14px'>شكل الفوتر</div>",
+            "groups": [
+                "footer"
+            ]
+        },
+        {
+            "id": "footer_shape",
+            "type": "items",
+            "format": "dropdown-list",
+            "label": "شكل الفوتر",
+            "icon": "sicon-layout-footer",
+            "selected": [
+                {
+                    "label": "4 أعمدة",
+                    "value": "columns",
+                    "key": "footer-shape-columns"
+                }
+            ],
+            "options": [
+                {
+                    "label": "4 أعمدة",
+                    "value": "columns",
+                    "key": "footer-shape-columns"
+                },
+                {
+                    "label": "مركزي مصغّر",
+                    "value": "mini",
+                    "key": "footer-shape-mini"
+                }
+            ],
+            "source": "Manual",
+            "required": true,
+            "groups": [
+                "footer"
+            ]
         }
     ],
     "components": [
