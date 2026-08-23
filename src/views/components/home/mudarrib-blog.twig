@@ -1,0 +1,23 @@
+{#
+| component.shape | 1=شبكة 3, 2=قائمة |
+| component.items | (icon, category, title, excerpt) |
+#}
+<section class="s-block mudarrib-blog container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('نصائح رياضية') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    {% if component.shape|default('1') == '1' %}
+        <div class="blog-grid">
+            {% for item in component.items|default([]) %}
+                <div class="blog-card"><div class="b-img">{{ item.icon|default('📝') }}</div><div class="b-body"><span class="b-cat">{{ item.category }}</span><h3>{{ item.title }}</h3><p>{{ item.excerpt }}</p><span class="b-more">اقرأ المزيد ←</span></div></div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div style="max-width:700px">
+            {% for item in component.items|default([]) %}
+                <div class="mudarrib-why"><div class="why-row"><div class="why-ic">{{ item.icon|default('📝') }}</div><div><h3>{{ item.title }}</h3><p>{{ item.category }}</p></div></div></div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</section>

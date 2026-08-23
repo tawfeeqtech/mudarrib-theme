@@ -1,0 +1,26 @@
+{#
+| component.shape | 1=كاملة, 2=مختصرة |
+| component.tag / name / story / image_icon |
+| component.metrics | (value, label) |
+#}
+<section class="s-block mudarrib-case container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('قصص نجاح حقيقية') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    <div class="case-box">
+        {% if component.shape|default('1') == '1' %}
+            <div class="case-hero">{{ component.image_icon|default('🏆') }}</div>
+        {% endif %}
+        <div class="case-body">
+            <div class="case-tag">{{ component.tag|default('قصة نجاح') }}</div>
+            <h3>{{ component.name|default('') }}</h3>
+            <p>{{ component.story|default('') }}</p>
+            {% if component.metrics %}
+                <div class="case-metrics">
+                    {% for m in component.metrics %}<div class="m"><div class="v">{{ m.value }}</div><div class="l">{{ m.label }}</div></div>{% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

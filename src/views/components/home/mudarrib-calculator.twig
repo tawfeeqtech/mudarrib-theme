@@ -1,0 +1,34 @@
+{#
+| component.shape | 1=نموذج, 2=بنتيجة بارزة |
+| component.fields | (label, options[]) |
+| component.result_price / result_label |
+#}
+<section class="s-block mudarrib-calc container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('احسب باقتك') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    <div class="calc-box">
+        {% for f in component.fields|default([]) %}
+            <div class="calc-field">
+                <label>{{ f.label }}</label>
+                <div class="mud-select" data-placeholder="{{ f.placeholder|default('اختر') }}">
+                    <div class="mud-select__trigger">
+                        <span class="mud-select__value is-placeholder">{{ f.placeholder|default('اختر') }}</span>
+                        <svg class="mud-select__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="mud-select__menu">
+                        {% for opt in f.options|default([]) %}
+                            <div class="mud-select__option" data-value="{{ opt }}">{{ opt }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% if component.shape|default('1') == '2' %}<button class="quiz-submit">{{ component.btn_label|default('احسب') }}</button>{% endif %}
+        <div class="calc-result">
+            <div class="price">{{ component.result_price|default('349') }} {{ component.currency|default('ريال') }}</div>
+            <div class="lbl">{{ component.result_label|default('باقتك المقترحة') }}</div>
+        </div>
+    </div>
+</section>

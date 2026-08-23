@@ -1,0 +1,14 @@
+{#
+| component.shape | 1=ملء الشاشة, 2=بإطار |
+| component.video_url / caption |
+#}
+<section class="s-block mudarrib-video container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('تعرّف على الكوتش') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    <div class="video-embed" {% if component.video_url %}data-video="{{ component.video_url }}"{% endif %}>
+        <div class="play">▶</div>
+        {% if component.caption %}<span class="v-caption">{{ component.caption }}</span>{% endif %}
+    </div>
+</section>

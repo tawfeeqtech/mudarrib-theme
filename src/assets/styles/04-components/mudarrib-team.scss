@@ -1,0 +1,57 @@
+// ============================================================
+// ثيم مدرّب — الفريق والمصداقية والخدمات
+// (Team / Certifications / Partners / Location / GettingStarted / Instagram / FloatingCTA)
+// ============================================================
+
+/* ---------- فريق المدربين (Team) ---------- */
+.mudarrib-team .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.mudarrib-team .team-card { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 20px; overflow: hidden; text-align: center; }
+.mudarrib-team .team-card .t-img { aspect-ratio: 1; background: var(--mud-glow); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
+.mudarrib-team .team-card .t-body { padding: 18px; }
+.mudarrib-team .team-card h4 { font-size: 1.05rem; }
+.mudarrib-team .team-card .role { color: var(--mud-primary); font-size: 0.85rem; font-weight: 700; }
+.mudarrib-team .team-card .spec { color: var(--mud-muted); font-size: 0.8rem; margin-top: 6px; }
+
+/* ---------- التراخيص والشهادات (Certifications) ---------- */
+.mudarrib-certs .certs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.mudarrib-certs .cert-card { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 18px; padding: 24px; text-align: center; }
+.mudarrib-certs .cert-card .c-ic { font-size: 2.5rem; margin-bottom: 12px; }
+.mudarrib-certs .cert-card h4 { font-size: 0.95rem; }
+.mudarrib-certs .cert-card span { color: var(--mud-muted); font-size: 0.78rem; }
+
+/* ---------- شركاء النجاح (Partners) ---------- */
+.mudarrib-partners .partners-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
+.mudarrib-partners .partner-logo { width: 130px; height: 70px; background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--mud-primary); opacity: 0.7; transition: all 0.3s; font-size: 1.1rem; }
+.mudarrib-partners .partner-logo:hover { opacity: 1; border-color: var(--mud-primary); }
+
+/* ---------- خريطة الموقع (Location) ---------- */
+.mudarrib-location .location-box { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--mud-border); border-radius: 24px; overflow: hidden; }
+.mudarrib-location .location-map { min-height: 300px; background: var(--mud-glow); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+.mudarrib-location .location-info { background: var(--mud-card); padding: 34px; }
+.mudarrib-location .location-info h3 { margin-bottom: 16px; }
+.mudarrib-location .location-info .li-row { display: flex; gap: 12px; margin-bottom: 14px; color: var(--mud-muted); }
+.mudarrib-location .location-info .li-row .ic { color: var(--mud-primary); }
+
+/* ---------- قائمة البدء (Getting Started) ---------- */
+.mudarrib-steps .steps-list { display: flex; flex-direction: column; gap: 20px; max-width: 700px; margin: 0 auto; }
+.mudarrib-steps .step-item { display: flex; gap: 20px; align-items: flex-start; }
+.mudarrib-steps .step-num { width: 48px; height: 48px; border-radius: 50%; background: var(--mud-primary); color: #000; font-weight: 900; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 0 16px var(--mud-glow); }
+.mudarrib-steps .step-item h4 { font-size: 1.1rem; margin-bottom: 6px; }
+.mudarrib-steps .step-item p { color: var(--mud-muted); font-size: 0.9rem; line-height: 1.6; }
+
+/* ---------- سوشيال فيد (Instagram Feed) ---------- */
+.mudarrib-insta .insta-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.mudarrib-insta .insta-item { aspect-ratio: 1; border-radius: 14px; background: var(--mud-glow); border: 1px solid var(--mud-border); display: flex; align-items: center; justify-content: center; font-size: 2rem; cursor: pointer; transition: all 0.3s; position: relative; overflow: hidden; }
+.mudarrib-insta .insta-item:hover { transform: scale(1.04); border-color: var(--mud-primary); }
+.mudarrib-insta .insta-item img { width: 100%; height: 100%; object-fit: cover; }
+.mudarrib-insta .insta-handle { text-align: center; margin-top: 20px; color: var(--mud-primary); font-weight: 700; }
+
+/* ---------- زر عائم (Floating CTA) ---------- */
+.mudarrib-floating .floating-btn { position: fixed; bottom: 24px; left: 24px; z-index: 90; background: var(--mud-primary); color: #000; padding: 14px 26px; border-radius: 50px; font-weight: 900; display: flex; align-items: center; gap: 8px; box-shadow: 0 0 24px var(--mud-glow); cursor: pointer; transition: transform 0.25s; }
+.mudarrib-floating .floating-btn.whatsapp { background: #25D366; color: #fff; }
+.mudarrib-floating .floating-btn:hover { transform: translateY(-4px); }
+
+@media (max-width: 900px) {
+  .mudarrib-team .team-grid, .mudarrib-certs .certs-grid, .mudarrib-insta .insta-grid { grid-template-columns: repeat(2, 1fr); }
+  .mudarrib-location .location-box { grid-template-columns: 1fr; }
+}

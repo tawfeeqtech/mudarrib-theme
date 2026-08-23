@@ -1,0 +1,49 @@
+// ============================================================
+// ثيم مدرّب — عناصر المحتوى (Video / VideoTestimonials / CaseStudy / Blog)
+// ============================================================
+
+/* ---------- فيديو تعريفي (Video Intro) ---------- */
+.mudarrib-video .video-embed { position: relative; aspect-ratio: 16/9; border-radius: 24px; overflow: hidden; background: var(--mud-glow); border: 1px solid var(--mud-border); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.mudarrib-video .video-embed .play { width: 80px; height: 80px; border-radius: 50%; background: var(--mud-primary); color: #000; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 0 30px var(--mud-glow); transition: transform 0.3s; }
+.mudarrib-video .video-embed:hover .play { transform: scale(1.1); }
+.mudarrib-video .video-embed .v-caption { position: absolute; bottom: 16px; right: 50%; transform: translateX(50%); color: var(--mud-primary); font-weight: 700; background: var(--mud-bg); padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; white-space: nowrap; }
+.mudarrib-video[data-shape="2"] .video-embed { border: 2px solid var(--mud-primary); }
+
+/* ---------- آراء بالفيديو (Video Testimonials) ---------- */
+.mudarrib-vtesti .vtesti-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mudarrib-vtesti .vtesti-card { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 20px; overflow: hidden; }
+.mudarrib-vtesti .vtesti-card .thumb { aspect-ratio: 16/10; background: var(--mud-glow); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; cursor: pointer; position: relative; }
+.mudarrib-vtesti .vtesti-card .thumb .play { position: absolute; width: 48px; height: 48px; border-radius: 50%; background: var(--mud-primary); color: #000; display: flex; align-items: center; justify-content: center; }
+.mudarrib-vtesti .vtesti-card .v-body { padding: 16px; }
+.mudarrib-vtesti .vtesti-card h4 { font-size: 1rem; }
+.mudarrib-vtesti .vtesti-card span { color: var(--mud-primary); font-size: 0.8rem; }
+.mudarrib-vtesti[data-shape="2"] .vtesti-slider { display: flex; overflow-x: auto; gap: 20px; padding: 20px 10px; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.mudarrib-vtesti[data-shape="2"] .vtesti-slider::-webkit-scrollbar { display: none; }
+.mudarrib-vtesti[data-shape="2"] .vtesti-card { min-width: 320px; flex-shrink: 0; scroll-snap-align: center; }
+
+/* ---------- قصة نجاح مفصلة (Case Study) ---------- */
+.mudarrib-case .case-box { max-width: 900px; margin: 0 auto; background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 24px; overflow: hidden; }
+.mudarrib-case .case-hero { height: 240px; background: var(--mud-glow); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+.mudarrib-case .case-body { padding: 34px; }
+.mudarrib-case .case-body .case-tag { color: var(--mud-primary); font-weight: 800; letter-spacing: 2px; font-size: 0.8rem; }
+.mudarrib-case .case-body h3 { font-size: 1.6rem; margin: 10px 0 18px; }
+.mudarrib-case .case-body p { color: var(--mud-muted); line-height: 1.8; }
+.mudarrib-case .case-metrics { display: flex; gap: 30px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--mud-border); }
+.mudarrib-case .case-metrics .m { text-align: center; }
+.mudarrib-case .case-metrics .m .v { font-size: 1.8rem; font-weight: 900; color: var(--mud-primary); }
+.mudarrib-case .case-metrics .m .l { color: var(--mud-muted); font-size: 0.8rem; }
+
+/* ---------- آخر المقالات (Blog) ---------- */
+.mudarrib-blog .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mudarrib-blog .blog-card { background: var(--mud-card); border: 1px solid var(--mud-border); border-radius: 20px; overflow: hidden; transition: all 0.3s; }
+.mudarrib-blog .blog-card:hover { border-color: var(--mud-primary); transform: translateY(-5px); }
+.mudarrib-blog .blog-card .b-img { height: 180px; background: var(--mud-glow); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+.mudarrib-blog .blog-card .b-body { padding: 20px; }
+.mudarrib-blog .blog-card .b-cat { color: var(--mud-primary); font-size: 0.78rem; font-weight: 700; }
+.mudarrib-blog .blog-card h3 { font-size: 1.1rem; margin: 8px 0; line-height: 1.5; }
+.mudarrib-blog .blog-card p { color: var(--mud-muted); font-size: 0.88rem; }
+.mudarrib-blog .blog-card .b-more { color: var(--mud-primary); font-weight: 700; font-size: 0.85rem; margin-top: 12px; display: inline-block; }
+
+@media (max-width: 900px) {
+  .mudarrib-vtesti .vtesti-grid, .mudarrib-blog .blog-grid { grid-template-columns: 1fr; }
+}

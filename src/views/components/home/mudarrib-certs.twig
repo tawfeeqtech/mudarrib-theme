@@ -1,0 +1,23 @@
+{#
+| component.shape | 1=شبكة شارات, 2=شريط أفقي |
+| component.items | (icon, name, org) |
+#}
+<section class="s-block mudarrib-certs container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('شهادات معتمدة') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    {% if component.shape|default('1') == '1' %}
+        <div class="certs-grid">
+            {% for item in component.items|default([]) %}
+                <div class="cert-card"><div class="c-ic">{{ item.icon|default('🎓') }}</div><h4>{{ item.name }}</h4><span>{{ item.org }}</span></div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="mudarrib-partners"><div class="partners-strip">
+            {% for item in component.items|default([]) %}
+                <div class="partner-logo">{{ item.icon|default('🎓') }} {{ item.name }}</div>
+            {% endfor %}
+        </div></div>
+    {% endif %}
+</section>

@@ -1,0 +1,23 @@
+{#
+| component.shape | 1=شبكة, 2=أفقية |
+| component.items | (image_icon, name, role, spec) |
+#}
+<section class="s-block mudarrib-team container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('فريق التدريب') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    {% if component.shape|default('1') == '1' %}
+        <div class="team-grid">
+            {% for item in component.items|default([]) %}
+                <div class="team-card"><div class="t-img">{{ item.image_icon|default('👨‍🏫') }}</div><div class="t-body"><h4>{{ item.name }}</h4><div class="role">{{ item.role }}</div><div class="spec">{{ item.spec }}</div></div></div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div style="max-width:800px">
+            {% for item in component.items|default([]) %}
+                <div class="mudarrib-ach"><div class="ach-row"><span class="medal">{{ item.image_icon|default('👨‍🏫') }}</span><h4>{{ item.name }}</h4><span class="val">{{ item.role }}</span></div></div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</section>

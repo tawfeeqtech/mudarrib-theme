@@ -1,0 +1,83 @@
+// ============================================================
+// ثيم مدرّب — قائمة منسدلة حديثة (Custom Dropdown)
+// بديل كامل للـ select الأصلي، بنمط الهوية
+// ============================================================
+.mud-select {
+  position: relative;
+  user-select: none;
+}
+.mud-select__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background-color: var(--mud-card);
+  border: 1px solid var(--mud-border);
+  border-radius: 14px;
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.mud-select__trigger:hover {
+  border-color: var(--mud-primary);
+}
+.mud-select__value {
+  font-size: 0.95rem;
+  color: var(--mud-primary);
+  font-weight: 600;
+  line-height: 1;
+}
+.mud-select__value.is-placeholder {
+  color: var(--mud-muted);
+  font-weight: 400;
+}
+.mud-select__arrow {
+  flex-shrink: 0;
+  color: var(--mud-primary);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mud-select.open .mud-select__trigger {
+  border-color: var(--mud-primary);
+  box-shadow: 0 0 0 3px var(--mud-glow);
+}
+.mud-select.open .mud-select__arrow {
+  transform: rotate(180deg);
+}
+.mud-select__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  left: 0;
+  z-index: 50;
+  background-color: var(--mud-card-hover);
+  border: 1px solid var(--mud-primary);
+  border-radius: 14px;
+  padding: 6px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 20px var(--mud-glow);
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s;
+}
+.mud-select.open .mud-select__menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.mud-select__option {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  color: var(--mud-muted);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.mud-select__option:hover {
+  background-color: var(--mud-glow);
+  color: var(--mud-primary);
+}
+.mud-select__option.selected {
+  background-color: var(--mud-glow);
+  color: var(--mud-primary);
+  font-weight: 700;
+}

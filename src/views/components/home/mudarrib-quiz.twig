@@ -1,0 +1,28 @@
+{#
+| component.shape | 1=أسئلة كاملة, 2=خطوات |
+| component.questions | (question, options[]) |
+#}
+<section class="s-block mudarrib-quiz container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('اعرف مستواك') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    <div class="quiz-box">
+        {% if component.shape|default('1') == '2' %}
+            <div class="quiz-stepbar">
+                {% for q in component.questions|default([]) %}<div class="quiz-step {% if loop.first %}active{% endif %}"></div>{% endfor %}
+            </div>
+        {% endif %}
+        {% for q in component.questions|default([]) %}
+            <div class="quiz-q">
+                <h4>{{ q.question }}</h4>
+                <div class="quiz-opts">
+                    {% for opt in q.options|default([]) %}
+                        <div class="quiz-opt">{{ opt }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+        <button class="quiz-submit">{{ component.btn_label|default('اكتشف باقتك المناسبة') }}</button>
+    </div>
+</section>

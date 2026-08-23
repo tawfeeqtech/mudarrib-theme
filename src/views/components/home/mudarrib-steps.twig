@@ -1,0 +1,23 @@
+{#
+| component.shape | 1=خطوات رأسية, 2=أفقية |
+| component.items | (title, text) |
+#}
+<section class="s-block mudarrib-steps container" data-shape="{{ component.shape|default('1') }}">
+    <div class="section-header">
+        <h2>{{ component.title|default('كيف تبدأ؟') }}</h2>
+        <div class="line-glow"></div>
+    </div>
+    {% if component.shape|default('1') == '1' %}
+        <div class="steps-list">
+            {% for item in component.items|default([]) %}
+                <div class="step-item"><div class="step-num">{{ loop.index }}</div><div><h4>{{ item.title }}</h4><p>{{ item.text }}</p></div></div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="mudarrib-counters" style="max-width:800px"><div class="counters-strip">
+            {% for item in component.items|default([]) %}
+                <div class="c2"><div class="num">{{ loop.index }}</div><div class="lbl">{{ item.title }}</div></div>
+            {% endfor %}
+        </div></div>
+    {% endif %}
+</section>
