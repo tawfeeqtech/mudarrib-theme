@@ -1,0 +1,108 @@
+// ============================================================
+// ثيم مدرّب — تلوين كل صفحات المتجر بالهوية
+// السلة / التصنيفات / المدونة / حساب العميل / شكراً لك / الصفحات / الماركات / الولاء
+//
+// الطريقة: تجاوز أدوات Tailwind المستخدمة فعلياً في القوالب
+// داخل نطاق body.theme-mudarrib — بلا تعديل أي ملف Twig.
+// (الأولوية 0,2,1 تتغلب على 0,1,0 فلا حاجة لـ !important)
+// ============================================================
+
+body.theme-mudarrib {
+
+  /* ---------- الأسطح ---------- */
+  .bg-white       { background-color: var(--mud-card); }
+  .bg-gray-50     { background-color: var(--mud-bg-alt); }
+  .bg-gray-100    { background-color: var(--mud-bg-alt); }
+  .bg-gray-200    { background-color: var(--mud-card-hover); }
+
+  /* ---------- النصوص ---------- */
+  .text-gray-900,
+  .text-gray-800,
+  .text-gray-700  { color: var(--mud-text); }
+  .text-gray-600,
+  .text-gray-500,
+  .text-gray-400  { color: var(--mud-muted); }
+  .text-black     { color: var(--mud-text); }
+
+  /* ---------- الحدود والفواصل ---------- */
+  .border-gray-100,
+  .border-gray-200,
+  .border-gray-300 { border-color: var(--mud-border); }
+  .divide-gray-100 > :not([hidden]) ~ :not([hidden]),
+  .divide-gray-200 > :not([hidden]) ~ :not([hidden]) { border-color: var(--mud-border); }
+  hr { border-color: var(--mud-border); }
+
+  /* ---------- مسار التنقل (breadcrumbs) ---------- */
+  .breadcrumbs,
+  .breadcrumbs a,
+  .breadcrumbs span { color: var(--mud-muted); }
+  .breadcrumbs a:hover { color: var(--mud-primary); }
+
+  /* ---------- العناوين ---------- */
+  h1, h2, h3, h4, h5, h6 { color: var(--mud-text); }
+
+  /* ---------- حقول الإدخال ---------- */
+  input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+  textarea,
+  select {
+    background-color: var(--mud-bg-alt);
+    border-color: var(--mud-border);
+    color: var(--mud-text);
+  }
+  input::placeholder,
+  textarea::placeholder { color: var(--mud-muted); }
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--mud-primary);
+    outline: none;
+  }
+  label { color: var(--mud-text); }
+
+  /* ---------- الجداول ---------- */
+  table  { color: var(--mud-text); }
+  thead  { background-color: var(--mud-bg-alt); }
+  th, td { border-color: var(--mud-border); }
+
+  /* ---------- أسطح مكوّنات سلة (s-*) ---------- */
+  .s-blocks-wrapper       { background-color: transparent; }
+  .s-cart-summary-card,
+  .s-order-totals-card,
+  .s-filters,
+  .s-comments,
+  .s-orders,
+  .s-user-settings,
+  .s-wallet,
+  .s-notifications,
+  .s-loyalty { color: var(--mud-text); }
+
+  /* ---------- بطاقات ومربعات عامة ---------- */
+  .shadow,
+  .shadow-sm,
+  .shadow-md,
+  .shadow-default { box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35); }
+  .rounded, .rounded-md, .rounded-lg { border-color: var(--mud-border); }
+
+  /* ---------- الروابط ---------- */
+  a:hover { color: var(--mud-primary); }
+
+  /* ---------- تنبيهات فاتحة تُبقى مقروءة ---------- */
+  .bg-green-50 { background-color: rgba(34, 197, 94, 0.12); }
+  .bg-red-50   { background-color: rgba(239, 68, 68, 0.12); }
+
+  /* ---------- صفحة شكراً لك ---------- */
+  .thankyou-page,
+  .thank-you { color: var(--mud-text); }
+
+  /* ---------- المدونة ---------- */
+  .blog-entry,
+  .content-entry { color: var(--mud-text); }
+  .content-entry a { color: var(--mud-primary); }
+}
+
+/* ---------- استثناءات: أسطح يجب أن تبقى فاتحة ---------- */
+body.theme-mudarrib {
+  /* صور المنتجات وحاويات الصور لا تُصبغ */
+  .s-product-card-image,
+  img { background-color: transparent; }
+}

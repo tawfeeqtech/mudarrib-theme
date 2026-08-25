@@ -15,6 +15,9 @@ body.theme-mudarrib custom-salla-product-card {
     background-color: var(--mud-bg-alt);
   }
   .s-product-card-content-title a {
+    color: var(--mud-text);
+  }
+  .s-product-card-content-title a:hover {
     color: var(--mud-primary);
   }
   .s-product-card-content-subtitle {
@@ -31,10 +34,10 @@ body.theme-mudarrib custom-salla-product-card {
 /* صفحة المنتج — خلفية داكنة */
 body.theme-mudarrib main#main-content {
   background-color: var(--mud-bg);
-  color: var(--mud-primary);
+  color: var(--mud-text);
 }
 body.theme-mudarrib main#main-content h1 {
-  color: var(--mud-primary);
+  color: var(--mud-text);
 }
 
 /* أزرار السلة والشراء بالهوية */

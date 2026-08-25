@@ -77,6 +77,14 @@ body.identity-dark {
 }
 
 // ============================================================
+// لون النص الأساسي لكل هوية (غير لون الإبراز)
+// ============================================================
+body.identity-gold   { --mud-text: #f5f0e8; }
+body.identity-orange { --mud-text: #fdf2ee; }
+body.identity-neon   { --mud-text: #eaf7e0; }
+body.identity-dark   { --mud-text: #f0f0f0; }
+
+// ============================================================
 // تطبيق الخلفية الداكنة على الموقع (كل الهويات داكنة)
 // ============================================================
 body.identity-gold,
@@ -84,7 +92,7 @@ body.identity-orange,
 body.identity-neon,
 body.identity-dark {
   background-color: var(--mud-bg);
-  color: #ffffff;
+  color: var(--mud-text);
 }
 
 // تلوين النصوص والروابط العامة بالهوية
