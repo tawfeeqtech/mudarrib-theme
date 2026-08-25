@@ -1762,7 +1762,7 @@
                         },
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الأيقونة",
                             "id": "items.icon",
                             "value": "🏅",
@@ -1778,7 +1778,9 @@
                             "required": false,
                             "value": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "9d5a74ca-3818-488e-8431-710b4081c1b5",
@@ -1790,7 +1792,7 @@
                 "en": "Counters",
                 "ar": "أرقام متحركة"
             },
-            "icon": "sicon-chart",
+            "icon": "sicon-list",
             "fields": [
                 {
                     "id": "shape",
@@ -1875,7 +1877,9 @@
                             "format": "text",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "56128f29-59f4-43df-9a23-ab22af1595e3",
@@ -1954,7 +1958,7 @@
                     "fields": [
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الأيقونة",
                             "id": "items.icon",
                             "value": "🎯",
@@ -1981,7 +1985,9 @@
                             "format": "textarea",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "2e7fbfe5-ceb6-4f07-b35d-0b534bada9b1",
@@ -2060,7 +2066,7 @@
                     "fields": [
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الأيقونة",
                             "id": "items.icon",
                             "value": "📱",
@@ -2087,7 +2093,9 @@
                             "format": "textarea",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "22649620-9fbe-486e-b7fa-e768abe7d137",
@@ -2169,7 +2177,7 @@
                     "fields": [
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الأيقونة",
                             "id": "items.icon",
                             "value": "⚽",
@@ -2205,7 +2213,9 @@
                             "format": "textarea",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "25d0bb05-c0a3-491b-98bb-12f4b82c986d",
@@ -2367,7 +2377,9 @@
                             "format": "textarea",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "408e2208-9b87-499d-b8fc-09d31ad8dd99",
@@ -2379,7 +2391,7 @@
                 "en": "Comparison",
                 "ar": "جدول مقارنة"
             },
-            "icon": "sicon-table",
+            "icon": "sicon-list",
             "fields": [
                 {
                     "id": "shape",
@@ -2525,7 +2537,7 @@
                 "en": "Countdown",
                 "ar": "عرض محدود"
             },
-            "icon": "sicon-clock",
+            "icon": "sicon-list",
             "fields": [
                 {
                     "id": "shape",
@@ -2731,7 +2743,9 @@
                             "format": "text",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "311574b6-1fb6-49d9-8404-a689db1a1868",
@@ -2743,7 +2757,7 @@
                 "en": "Results",
                 "ar": "نتائج اللاعبين"
             },
-            "icon": "sicon-chart",
+            "icon": "sicon-list",
             "fields": [
                 {
                     "id": "shape",
@@ -2816,7 +2830,7 @@
                     "fields": [
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الأيقونة",
                             "id": "items.icon",
                             "value": "🏃",
@@ -2860,7 +2874,9 @@
                             "format": "text",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "aae87508-4351-4c6d-b895-1996e16ba861",
@@ -2949,14 +2965,16 @@
                         },
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الأيقونة (بديل الصورة)",
                             "id": "items.icon",
                             "value": "🏆",
                             "format": "text",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "c8051e23-e204-4b53-a25c-9c273ee903eb",
@@ -3149,7 +3167,9 @@
                             "format": "textarea",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "f49229dc-0e8d-4b3b-a7d5-d2caf3c76533",
@@ -3316,7 +3336,7 @@
                     "fields": [
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الأيقونة",
                             "id": "items.icon",
                             "value": "💬",
@@ -3343,7 +3363,9 @@
                             "format": "text",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "533c6340-3962-480e-8a7b-73a90ddf6e48",
@@ -3355,7 +3377,7 @@
                 "en": "Schedule",
                 "ar": "جدول الحصص الأسبوعي"
             },
-            "icon": "sicon-calendar",
+            "icon": "sicon-list",
             "fields": [
                 {
                     "id": "shape",
@@ -3457,7 +3479,9 @@
                             "format": "textarea",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "65831a92-9b79-4d41-9f0d-297b3373784e",
@@ -3556,7 +3580,9 @@
                             "format": "textarea",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "69321c7e-1abd-4b06-a4f0-37f2cdc2cd3b",
@@ -3568,7 +3594,7 @@
                 "en": "Calculator",
                 "ar": "حاسبة الباقة"
             },
-            "icon": "sicon-calculator",
+            "icon": "sicon-list",
             "fields": [
                 {
                     "id": "shape",
@@ -3687,7 +3713,9 @@
                             "format": "textarea",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "3ef24d93-d667-4595-bf1a-fa55c3a71595",
@@ -3699,7 +3727,7 @@
                 "en": "Video Intro",
                 "ar": "فيديو تعريفي"
             },
-            "icon": "sicon-video",
+            "icon": "sicon-image-carousel",
             "fields": [
                 {
                     "id": "shape",
@@ -3853,14 +3881,16 @@
                         },
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الأيقونة",
                             "id": "items.icon",
                             "value": "🎥",
                             "format": "text",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "cacb7a73-c569-4451-9d97-be665ce924d4",
@@ -3990,7 +4020,9 @@
                             "format": "text",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "9bec84eb-2690-470a-9895-f13672c44eb8",
@@ -4002,7 +4034,7 @@
                 "en": "Blog",
                 "ar": "آخر المقالات"
             },
-            "icon": "sicon-article",
+            "icon": "sicon-format-text-alt",
             "fields": [
                 {
                     "id": "shape",
@@ -4072,7 +4104,7 @@
                     "fields": [
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الأيقونة",
                             "id": "items.icon",
                             "value": "📝",
@@ -4108,7 +4140,9 @@
                             "format": "textarea",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "df559bd8-61da-46aa-9431-c12a67961545",
@@ -4190,7 +4224,7 @@
                     "fields": [
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الصورة/الأيقونة",
                             "id": "items.image_icon",
                             "value": "👨‍🏫",
@@ -4224,7 +4258,9 @@
                             "format": "text",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "41be0d68-4ae4-4b9d-8367-83827c1b2030",
@@ -4308,7 +4344,7 @@
                     "fields": [
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الأيقونة",
                             "id": "items.icon",
                             "value": "🎓",
@@ -4333,7 +4369,9 @@
                             "format": "text",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "4af8f9fe-c036-4865-afde-76cb046aafbb",
@@ -4416,7 +4454,9 @@
                             "format": "text",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "cb4fb38c-a8ea-49c9-bfb5-45eab0f11446",
@@ -4523,7 +4563,7 @@
                 "en": "Getting Started",
                 "ar": "قائمة البدء"
             },
-            "icon": "sicon-list-check",
+            "icon": "sicon-list",
             "fields": [
                 {
                     "id": "shape",
@@ -4605,7 +4645,9 @@
                             "format": "textarea",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "8d72472e-870f-49c4-b17b-75c25d1588b0",
@@ -4617,7 +4659,7 @@
                 "en": "Instagram Feed",
                 "ar": "سوشيال فيد"
             },
-            "icon": "sicon-instagram",
+            "icon": "sicon-image",
             "fields": [
                 {
                     "id": "shape",
@@ -4705,14 +4747,16 @@
                         },
                         {
                             "type": "string",
-                            "icon": "sicon-emoji",
+                            "icon": "sicon-typography",
                             "label": "الأيقونة",
                             "id": "items.icon",
                             "value": "🏋️",
                             "format": "text",
                             "required": false
                         }
-                    ]
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
                 }
             ],
             "key": "e8a6a3a0-4fcb-453f-9bb9-befadfcc8735",
