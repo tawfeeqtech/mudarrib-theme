@@ -13,7 +13,7 @@
 <section class="s-block mudarrib-hero" data-shape="{{ component.shape|default('1') }}">
     {% if component.shape|default('1') == '1' %}
         {# شكل 1: رياضي داكن #}
-        <h1 class="hero-title">{{ component.title|default('إعداد بدني احترافي')|raw }}</h1>
+        <h1 class="hero-title">{{ component.title|default(trans('mudarrib.hero.title'))|raw }}</h1>
         {% if component.tags %}
             <div class="hero-tags">
                 {% for tag in component.tags %}
@@ -32,7 +32,7 @@
         {# شكل 2: صورة كاملة #}
         <div class="hero-bg" style="--mud-hero-image: url('{{ component.image }}');"></div>
         <div class="hero-content">
-            <h2 class="hero-ar">{{ component.subtitle|default('اصنع نسختك الأفضل مع') }}</h2>
+            <h2 class="hero-ar">{{ component.subtitle|default(trans('mudarrib.hero.subtitle')) }}</h2>
             <h1 class="hero-en">{{ component.title|default('COACH NAME') }}</h1>
             {% if component.description %}
                 <p class="hero-desc">{{ component.description }}</p>
@@ -48,7 +48,7 @@
             {% if component.subtitle %}
                 <p class="hero-eyebrow">{{ component.subtitle }}</p>
             {% endif %}
-            <h2>{{ component.title|default('حقق هدفك البدني بخطة علمية واضحة') }}</h2>
+            <h2>{{ component.title|default(trans('mudarrib.hero.title_centered')) }}</h2>
             {% if component.description %}
                 <p class="hero-desc">{{ component.description }}</p>
             {% endif %}

@@ -4,14 +4,14 @@
 <section class="s-block mudarrib-cta container" data-shape="{{ component.shape|default('1') }}">
     {% if component.shape|default('1') == '1' %}
         <div class="cta-box">
-            <h2>{{ component.title|default('جاهز تبدأ رحلتك؟') }}</h2>
-            <p>{{ component.text|default('لا تؤجل هدفك أكثر. ابدأ اليوم بخطة تدريب مخصصة.') }}</p>
-            <a href="{{ component.btn_url|default('#') }}" class="hero-btn" style="margin-top:0">{{ component.btn_label|default('ابدأ الآن') }}</a>
+            <h2>{{ component.title|default(trans('mudarrib.cta.title')) }}</h2>
+            <p>{{ component.text|default(trans('mudarrib.cta.text')) }}</p>
+            <a href="{{ component.btn_url|default('#') }}" class="hero-btn" style="margin-top:0">{{ component.btn_label|default(trans('mudarrib.cta.btn')) }}</a>
         </div>
     {% else %}
         <div class="cta-split">
-            <div class="txt"><h3>{{ component.title|default('جاهز تبدأ رحلتك؟') }}</h3><p>{{ component.text|default('') }}</p></div>
-            <a href="{{ component.btn_url|default('#') }}" class="hero-btn" style="margin-top:0">{{ component.btn_label|default('ابدأ الآن') }}</a>
+            <div class="txt"><h3>{{ component.title|default(trans('mudarrib.cta.title')) }}</h3><p>{{ component.text|default('') }}</p></div>
+            <a href="{{ component.btn_url|default('#') }}" class="hero-btn" style="margin-top:0">{{ component.btn_label|default(trans('mudarrib.cta.btn')) }}</a>
         </div>
     {% endif %}
 </section>

@@ -5,6 +5,6 @@
 <div class="mudarrib-floating">
     <a href="{{ component.url|default('#') }}" class="floating-btn {% if component.shape|default('1') == '1' %}whatsapp{% endif %}" target="_blank">
         {% if component.shape|default('1') == '1' %}💬{% else %}📅{% endif %}
-        {{ component.label|default('تواصل واتساب') }}
+        {{ component.label|default(trans('mudarrib.floating.whatsapp')) }}
     </a>
 </div>

@@ -23,5 +23,144 @@
   "common": {
     "bank_offer_sub_title_multiple": "Pay for your purchases via one of the following bank cards and get the specified discount",
     "bank_offer_sub_title_single": "Pay for your purchases via :bank_name bank card and get discount"
+  },
+  "mudarrib": {
+    "achievements": {
+      "title": "Athlete Achievements"
+    },
+    "before_after": {
+      "title": "Before & After"
+    },
+    "common": {
+      "before": "Before",
+      "after": "After",
+      "currency": "SAR",
+      "select": "Select",
+      "avatar_initial": "A"
+    },
+    "blog": {
+      "read_more": "Read more →",
+      "title": "Fitness Tips"
+    },
+    "calculator": {
+      "result": "Your recommended plan",
+      "title": "Calculate Your Plan",
+      "btn": "Calculate"
+    },
+    "case": {
+      "title": "Real Success Stories",
+      "tag": "Success Story"
+    },
+    "certs": {
+      "title": "Certified Credentials"
+    },
+    "comparison": {
+      "title": "Compare Plans",
+      "feature": "Feature"
+    },
+    "contact": {
+      "message_placeholder": "Write your inquiry",
+      "title": "Contact Me",
+      "phone": "Mobile",
+      "message": "Your message",
+      "name": "Name",
+      "send": "Send",
+      "name_placeholder": "Your name"
+    },
+    "countdown": {
+      "title": "⚡ Limited offer ending soon",
+      "strip_title": "⚡ Offer ends in:",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "hours": "Hours",
+      "days": "Days"
+    },
+    "counters": {
+      "title": "Numbers That Speak"
+    },
+    "cta": {
+      "text": "Don't delay your goal. Start today with a personalized training plan.",
+      "title": "Ready to start your journey?",
+      "btn": "Start Now"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    },
+    "features": {
+      "title": "What's Included?"
+    },
+    "floating": {
+      "whatsapp": "Chat on WhatsApp"
+    },
+    "gallery": {
+      "title": "Athletes Gallery"
+    },
+    "hero": {
+      "title_centered": "Reach your fitness goal with a clear, science-based plan",
+      "subtitle": "Become your best self with",
+      "title": "Professional Physical Conditioning"
+    },
+    "insta": {
+      "title": "Follow Us on Instagram"
+    },
+    "location": {
+      "name": "Training Studio",
+      "title": "Our Location"
+    },
+    "partners": {
+      "title": "We've Worked With"
+    },
+    "pricing": {
+      "single_name": "Training Program",
+      "popular": "Most Popular",
+      "title": "Choose Your Plan",
+      "subscribe": "Subscribe Now",
+      "subscribe_short": "Subscribe"
+    },
+    "programs": {
+      "title": "Training Programs"
+    },
+    "promo": {
+      "text": "Use the code at checkout to get your discount",
+      "title": "Special Discount for My Followers 🎁",
+      "title_short": "Special Discount for My Followers"
+    },
+    "quiz": {
+      "btn": "Find My Plan",
+      "title": "Find Your Level"
+    },
+    "results": {
+      "title": "Athlete Results"
+    },
+    "schedule": {
+      "times": "6 AM,4 PM,8 PM",
+      "title": "Weekly Class Schedule",
+      "day": "Day"
+    },
+    "steps": {
+      "title": "How to Start?"
+    },
+    "story": {
+      "before_title": "The Beginning",
+      "coach_name": "Coach Name",
+      "role": "Certified Coach",
+      "after_title": "The Transformation"
+    },
+    "team": {
+      "title": "Training Team"
+    },
+    "testimonials": {
+      "title": "What Champions Say"
+    },
+    "video": {
+      "title": "Meet the Coach"
+    },
+    "vtesti": {
+      "title": "Our Clients Speak",
+      "watch": "Watch their story"
+    },
+    "why": {
+      "title": "Why Train With Me?"
+    }
   }
 }

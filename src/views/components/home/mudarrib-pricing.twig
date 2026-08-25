@@ -4,19 +4,19 @@
 #}
 <section class="s-block mudarrib-pricing container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
-        <h2>{{ component.title|default('اختر باقتك') }}</h2>
+        <h2>{{ component.title|default(trans('mudarrib.pricing.title')) }}</h2>
         <div class="line-glow"></div>
     </div>
     {% if component.shape|default('1') == '1' %}
         <div class="pricing-grid">
             {% for item in component.items|default([]) %}
                 <div class="price-card {% if item.popular %}popular{% endif %}">
-                    {% if item.popular %}<span class="pop-badge">{{ component.popular_label|default('الأكثر طلباً') }}</span>{% endif %}
+                    {% if item.popular %}<span class="pop-badge">{{ component.popular_label|default(trans('mudarrib.pricing.popular')) }}</span>{% endif %}
                     <h3>{{ item.name }}</h3>
                     <p class="p-sub">{{ item.period }}</p>
-                    <span class="p-amount">{{ item.price }}</span> <span class="p-currency">{{ component.currency|default('ريال') }}</span>
+                    <span class="p-amount">{{ item.price }}</span> <span class="p-currency">{{ component.currency|default(trans('mudarrib.common.currency')) }}</span>
                     <ul>{% for f in item.features_text|default('')|split('\n') %}{% if f|trim %}<li><span class="ck">✓</span>{{ f|trim }}</li>{% endif %}{% endfor %}</ul>
-                    <button class="p-buy">{{ component.btn_label|default('اشترك الآن') }}</button>
+                    <button class="p-buy">{{ component.btn_label|default(trans('mudarrib.pricing.subscribe')) }}</button>
                 </div>
             {% endfor %}
         </div>
@@ -26,11 +26,11 @@
             <div class="price-single">
                 <div class="ps-img">{{ component.image_icon|default('📋') }}</div>
                 <div class="ps-body">
-                    <h3>{{ single.name|default('الجدول التدريبي') }}</h3>
+                    <h3>{{ single.name|default(trans('mudarrib.pricing.single_name')) }}</h3>
                     <p class="p-sub">{{ single.period|default('') }}</p>
                     <ul>{% for f in single.features_text|default('')|split('\n') %}{% if f|trim %}<li><span class="ck">✓</span>{{ f|trim }}</li>{% endif %}{% endfor %}</ul>
-                    <p class="p-amount">{{ single.price|default('') }} <span class="p-currency">{{ component.currency|default('ريال') }}</span></p>
-                    <button class="p-buy">{{ component.btn_label|default('اشترك الآن') }}</button>
+                    <p class="p-amount">{{ single.price|default('') }} <span class="p-currency">{{ component.currency|default(trans('mudarrib.common.currency')) }}</span></p>
+                    <button class="p-buy">{{ component.btn_label|default(trans('mudarrib.pricing.subscribe')) }}</button>
                 </div>
             </div>
         </div>
@@ -39,8 +39,8 @@
             {% for item in component.items|default([]) %}
                 <div class="price-bar {% if item.popular %}popular{% endif %}">
                     <div class="pb-name"><h3>{{ item.name }}</h3><p>{{ item.period }}</p></div>
-                    <div class="pb-price">{{ item.price }} {{ component.currency|default('ريال') }}</div>
-                    <button class="pb-btn">{{ component.btn_label|default('اشترك') }}</button>
+                    <div class="pb-price">{{ item.price }} {{ component.currency|default(trans('mudarrib.common.currency')) }}</div>
+                    <button class="pb-btn">{{ component.btn_label|default(trans('mudarrib.pricing.subscribe_short')) }}</button>
                 </div>
             {% endfor %}
         </div>

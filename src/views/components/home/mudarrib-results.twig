@@ -4,7 +4,7 @@
 #}
 <section class="s-block mudarrib-results container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
-        <h2>{{ component.title|default('نتائج اللاعبين') }}</h2>
+        <h2>{{ component.title|default(trans('mudarrib.results.title')) }}</h2>
         <div class="line-glow"></div>
     </div>
     {% if component.shape|default('1') == '1' %}
@@ -16,7 +16,7 @@
     {% else %}
         {% for item in component.items|default([]) %}
             <div class="res-row">
-                <div class="avatar">{{ item.title|first|default('ع') }}</div>
+                <div class="avatar">{{ item.title|first|default(trans('mudarrib.common.avatar_initial')) }}</div>
                 <div class="info"><h4>{{ item.title }}</h4><div class="progress"><div class="fill" style="width:{{ item.percent|default(70) }}%"></div></div></div>
                 <span class="pct">{{ item.metric }}</span>
             </div>

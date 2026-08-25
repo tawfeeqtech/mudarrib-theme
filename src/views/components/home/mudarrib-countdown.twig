@@ -5,23 +5,23 @@
 <section class="s-block mudarrib-countdown container" data-shape="{{ component.shape|default('1') }}">
     {% if component.shape|default('1') == '1' %}
         <div class="cd-box">
-            <h3>{{ component.title|default('⚡ عرض محدود ينتهي قريباً') }}</h3>
+            <h3>{{ component.title|default(trans('mudarrib.countdown.title')) }}</h3>
             <p class="cd-sub">{{ component.text|default('') }}</p>
             <div class="cd-timer">
-                <div class="cd-unit"><span class="n">{{ component.days|default('02') }}</span><span class="l">يوم</span></div>
-                <div class="cd-unit"><span class="n">{{ component.hours|default('14') }}</span><span class="l">ساعة</span></div>
-                <div class="cd-unit"><span class="n">{{ component.mins|default('35') }}</span><span class="l">دقيقة</span></div>
-                <div class="cd-unit"><span class="n">{{ component.secs|default('20') }}</span><span class="l">ثانية</span></div>
+                <div class="cd-unit"><span class="n">{{ component.days|default('02') }}</span><span class="l">{{ trans('mudarrib.countdown.days') }}</span></div>
+                <div class="cd-unit"><span class="n">{{ component.hours|default('14') }}</span><span class="l">{{ trans('mudarrib.countdown.hours') }}</span></div>
+                <div class="cd-unit"><span class="n">{{ component.mins|default('35') }}</span><span class="l">{{ trans('mudarrib.countdown.minutes') }}</span></div>
+                <div class="cd-unit"><span class="n">{{ component.secs|default('20') }}</span><span class="l">{{ trans('mudarrib.countdown.seconds') }}</span></div>
             </div>
         </div>
     {% else %}
         <div class="cd-strip">
-            <span class="msg">{{ component.title|default('⚡ ينتهي العرض خلال:') }}</span>
+            <span class="msg">{{ component.title|default(trans('mudarrib.countdown.strip_title')) }}</span>
             <div class="t">
-                <div class="seg"><span class="n">{{ component.days|default('02') }}</span><span class="l">يوم</span></div>
-                <div class="seg"><span class="n">{{ component.hours|default('14') }}</span><span class="l">ساعة</span></div>
-                <div class="seg"><span class="n">{{ component.mins|default('35') }}</span><span class="l">دقيقة</span></div>
-                <div class="seg"><span class="n">{{ component.secs|default('20') }}</span><span class="l">ثانية</span></div>
+                <div class="seg"><span class="n">{{ component.days|default('02') }}</span><span class="l">{{ trans('mudarrib.countdown.days') }}</span></div>
+                <div class="seg"><span class="n">{{ component.hours|default('14') }}</span><span class="l">{{ trans('mudarrib.countdown.hours') }}</span></div>
+                <div class="seg"><span class="n">{{ component.mins|default('35') }}</span><span class="l">{{ trans('mudarrib.countdown.minutes') }}</span></div>
+                <div class="seg"><span class="n">{{ component.secs|default('20') }}</span><span class="l">{{ trans('mudarrib.countdown.seconds') }}</span></div>
             </div>
         </div>
     {% endif %}

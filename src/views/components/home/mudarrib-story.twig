@@ -10,7 +10,7 @@
 #}
 <section class="s-block mudarrib-story container" data-shape="{{ component.shape|default('1') }}">
     <div class="story-head">
-        <h2>{{ component.title|default('اسم الكوتش') }}</h2>
+        <h2>{{ component.title|default(trans('mudarrib.story.coach_name')) }}</h2>
         {% if component.subtitle %}<div class="sub">{{ component.subtitle }}</div>{% endif %}
         {% if component.meta %}<div class="meta">{{ component.meta }}</div>{% endif %}
     </div>
@@ -18,31 +18,31 @@
     {% if component.shape|default('1') == '1' %}
         <div class="story-block">
             <div class="story-img-wrap">
-                <span class="story-badge">{{ component.before_label|default('قبل') }}</span>
+                <span class="story-badge">{{ component.before_label|default(trans('mudarrib.common.before')) }}</span>
                 {% if component.before_image %}<img src="{{ component.before_image }}" alt="قبل">{% endif %}
             </div>
             <div class="story-txt">
-                <div class="story-eyebrow">{{ component.before_title|default('لحظة البداية') }}</div>
+                <div class="story-eyebrow">{{ component.before_title|default(trans('mudarrib.story.before_title')) }}</div>
                 <p>{{ component.before_text|default('') }}</p>
             </div>
         </div>
         <div class="story-arrow">⬇️</div>
         <div class="story-block">
             <div class="story-img-wrap">
-                <span class="story-badge">{{ component.after_label|default('بعد') }}</span>
+                <span class="story-badge">{{ component.after_label|default(trans('mudarrib.common.after')) }}</span>
                 {% if component.after_image %}<img src="{{ component.after_image }}" alt="بعد">{% endif %}
             </div>
             <div class="story-txt">
-                <div class="story-eyebrow">{{ component.after_title|default('التحول') }}</div>
+                <div class="story-eyebrow">{{ component.after_title|default(trans('mudarrib.story.after_title')) }}</div>
                 <p>{{ component.after_text|default('') }}</p>
             </div>
         </div>
         {% if component.closing %}<div class="story-closing">{{ component.closing }}</div>{% endif %}
     {% else %}
         <div class="bio-card">
-            <div class="bio-avatar">{{ component.avatar_letter|default('م') }}</div>
-            <h3>{{ component.title|default('اسم الكوتش') }}</h3>
-            <div class="role">{{ component.subtitle|default('مدرب معتمد') }}</div>
+            <div class="bio-avatar">{{ component.avatar_letter|default(trans('mudarrib.common.avatar_initial')) }}</div>
+            <h3>{{ component.title|default(trans('mudarrib.story.coach_name')) }}</h3>
+            <div class="role">{{ component.subtitle|default(trans('mudarrib.story.role')) }}</div>
             <p>{{ component.description|default('') }}</p>
         </div>
     {% endif %}

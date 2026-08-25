@@ -5,7 +5,7 @@
 #}
 <section class="s-block mudarrib-insta container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
-        <h2>{{ component.title|default('تابعنا على انستغرام') }}</h2>
+        <h2>{{ component.title|default(trans('mudarrib.insta.title')) }}</h2>
         <div class="line-glow"></div>
     </div>
     <div class="insta-grid" {% if component.shape|default('1') == '2' %}style="grid-template-columns:repeat(4,1fr)"{% endif %}>

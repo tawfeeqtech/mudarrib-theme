@@ -4,7 +4,7 @@
 #}
 <section class="s-block mudarrib-testi container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
-        <h2>{{ component.title|default('ماذا يقول الأبطال؟') }}</h2>
+        <h2>{{ component.title|default(trans('mudarrib.testimonials.title')) }}</h2>
         <div class="line-glow"></div>
     </div>
     {% if component.shape|default('1') == '1' %}
@@ -14,7 +14,7 @@
                     <div class="testi-stars">{{ '★'|repeat(item.stars|default(5)) }}</div>
                     <p class="testi-comment">{{ item.comment }}</p>
                     <div class="testi-divider"></div>
-                    <div class="testi-client"><div class="testi-avatar">{{ item.name|first|default('ع') }}</div><div><h4>{{ item.name }}</h4><span>{{ item.role }}</span></div></div>
+                    <div class="testi-client"><div class="testi-avatar">{{ item.name|first|default(trans('mudarrib.common.avatar_initial')) }}</div><div><h4>{{ item.name }}</h4><span>{{ item.role }}</span></div></div>
                 </div>
             {% endfor %}
         </div>
@@ -25,7 +25,7 @@
                     <div class="testi-stars">{{ '★'|repeat(item.stars|default(5)) }}</div>
                     <p class="testi-comment">{{ item.comment }}</p>
                     <div class="testi-divider"></div>
-                    <div class="testi-client"><div class="testi-avatar">{{ item.name|first|default('ع') }}</div><div><h4>{{ item.name }}</h4><span>{{ item.role }}</span></div></div>
+                    <div class="testi-client"><div class="testi-avatar">{{ item.name|first|default(trans('mudarrib.common.avatar_initial')) }}</div><div><h4>{{ item.name }}</h4><span>{{ item.role }}</span></div></div>
                 </div>
             {% endfor %}
         </div>
@@ -35,7 +35,7 @@
             <div class="big-quote">"</div>
             <p class="comment">{{ first.comment|default('') }}</p>
             <div class="stars">{{ '★'|repeat(first.stars|default(5)) }}</div>
-            <div class="testi-client" style="justify-content:center"><div class="testi-avatar">{{ first.name|first|default('ع') }}</div><div style="text-align:right"><h4>{{ first.name }}</h4><span>{{ first.role }}</span></div></div>
+            <div class="testi-client" style="justify-content:center"><div class="testi-avatar">{{ first.name|first|default(trans('mudarrib.common.avatar_initial')) }}</div><div style="text-align:right"><h4>{{ first.name }}</h4><span>{{ first.role }}</span></div></div>
         </div>
     {% endif %}
 </section>

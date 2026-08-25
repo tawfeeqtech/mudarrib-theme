@@ -5,7 +5,7 @@
 #}
 <section class="s-block mudarrib-case container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
-        <h2>{{ component.title|default('قصص نجاح حقيقية') }}</h2>
+        <h2>{{ component.title|default(trans('mudarrib.case.title')) }}</h2>
         <div class="line-glow"></div>
     </div>
     <div class="case-box">
@@ -13,7 +13,7 @@
             <div class="case-hero">{{ component.image_icon|default('🏆') }}</div>
         {% endif %}
         <div class="case-body">
-            <div class="case-tag">{{ component.tag|default('قصة نجاح') }}</div>
+            <div class="case-tag">{{ component.tag|default(trans('mudarrib.case.tag')) }}</div>
             <h3>{{ component.name|default('') }}</h3>
             <p>{{ component.story|default('') }}</p>
             {% if component.items %}

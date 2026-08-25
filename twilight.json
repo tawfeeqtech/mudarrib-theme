@@ -626,7 +626,7 @@
                     "label": "العنوان الرئيسي",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "إعداد بدني احترافي",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "maxLength": 100
@@ -1579,7 +1579,7 @@
                     "label": "اسم الكوتش",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "محمد أودين",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -1589,7 +1589,7 @@
                     "label": "الدور",
                     "multilanguage": true,
                     "id": "subtitle",
-                    "value": "الكابتن محمد السبيعي",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -1706,7 +1706,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "إنجازات مع الرياضيين",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -1828,7 +1828,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "أرقام تتحدث عنا",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -1927,7 +1927,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "لماذا تتدرب معي؟",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2035,7 +2035,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "ماذا تحصل في الباقة؟",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2143,7 +2143,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "برامج التدريب",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2268,7 +2268,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "اختر باقتك",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2277,7 +2277,7 @@
                     "icon": "sicon-typography",
                     "label": "العملة",
                     "id": "currency",
-                    "value": "ريال",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2286,7 +2286,7 @@
                     "icon": "sicon-typography",
                     "label": "نص الزر",
                     "id": "btn_label",
-                    "value": "اشترك الآن",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2295,7 +2295,7 @@
                     "icon": "sicon-typography",
                     "label": "شارة الأكثر طلباً",
                     "id": "popular_label",
-                    "value": "الأكثر طلباً",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2427,7 +2427,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "قارن الباقات",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2495,7 +2495,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "خصم خاص لمتابعيني 🎁",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2504,7 +2504,7 @@
                     "icon": "sicon-typography",
                     "label": "النص",
                     "id": "text",
-                    "value": "استخدم الكود عند الدفع واحصل على خصم",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "multilanguage": true
@@ -2573,7 +2573,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "⚡ عرض محدود ينتهي قريباً",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2674,7 +2674,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "ماذا يقول الأبطال؟",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2793,7 +2793,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "نتائج اللاعبين",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -2924,7 +2924,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "ألبوم الرياضيين",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3022,7 +3022,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "قبل وبعد",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3031,7 +3031,7 @@
                     "icon": "sicon-typography",
                     "label": "شارة قبل",
                     "id": "before_label",
-                    "value": "قبل",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3040,7 +3040,7 @@
                     "icon": "sicon-typography",
                     "label": "شارة بعد",
                     "id": "after_label",
-                    "value": "بعد",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3117,7 +3117,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "الأسئلة الشائعة",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3217,7 +3217,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "جاهز تبدأ رحلتك؟",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3226,7 +3226,7 @@
                     "icon": "sicon-typography",
                     "label": "النص",
                     "id": "text",
-                    "value": "لا تؤجل هدفك أكثر. ابدأ اليوم بخطة تدريب مخصصة.",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "multilanguage": true
@@ -3236,7 +3236,7 @@
                     "icon": "sicon-typography",
                     "label": "نص الزر",
                     "id": "btn_label",
-                    "value": "ابدأ الآن",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3296,7 +3296,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "تواصل معي",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3305,7 +3305,7 @@
                     "icon": "sicon-typography",
                     "label": "نص الزر",
                     "id": "btn_label",
-                    "value": "إرسال",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3413,7 +3413,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "جدول الحصص الأسبوعي",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3422,7 +3422,7 @@
                     "icon": "sicon-typography",
                     "label": "أوقات الحصص (مفصولة بفاصلة)",
                     "id": "times_text",
-                    "value": "6 صباحاً,4 عصراً,8 مساءً",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3529,7 +3529,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "اعرف مستواك",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3538,7 +3538,7 @@
                     "icon": "sicon-typography",
                     "label": "نص الزر",
                     "id": "btn_label",
-                    "value": "اكتشف باقتك المناسبة",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3630,7 +3630,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "احسب باقتك",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3639,7 +3639,7 @@
                     "icon": "sicon-typography",
                     "label": "العملة",
                     "id": "currency",
-                    "value": "ريال",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3648,7 +3648,7 @@
                     "icon": "sicon-typography",
                     "label": "نص الزر",
                     "id": "btn_label",
-                    "value": "احسب",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3666,7 +3666,7 @@
                     "icon": "sicon-typography",
                     "label": "نص النتيجة",
                     "id": "result_label",
-                    "value": "باقتك المقترحة: تطوير",
+                    "value": null,
                     "format": "text",
                     "required": false,
                     "multilanguage": true
@@ -3763,7 +3763,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "تعرّف على الكوتش",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3832,7 +3832,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "عملاؤنا يتحدثون",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3938,7 +3938,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "قصص نجاح حقيقية",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -3947,7 +3947,7 @@
                     "icon": "sicon-typography",
                     "label": "التصنيف",
                     "id": "tag",
-                    "value": "قصة نجاح",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -4070,7 +4070,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "نصائح رياضية",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -4190,7 +4190,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "فريق التدريب",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -4308,7 +4308,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "شهادات معتمدة",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -4419,7 +4419,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "عملنا مع",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -4504,7 +4504,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "موقعنا",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -4513,7 +4513,7 @@
                     "icon": "sicon-typography",
                     "label": "اسم المكان",
                     "id": "name",
-                    "value": "استوديو التدريب",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -4599,7 +4599,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "كيف تبدأ؟",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -4695,7 +4695,7 @@
                     "label": "العنوان",
                     "multilanguage": true,
                     "id": "title",
-                    "value": "تابعنا على انستغرام",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },
@@ -4803,7 +4803,7 @@
                     "icon": "sicon-typography",
                     "label": "نص الزر",
                     "id": "label",
-                    "value": "تواصل واتساب",
+                    "value": null,
                     "format": "text",
                     "required": false
                 },

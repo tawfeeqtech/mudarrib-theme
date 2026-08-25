@@ -4,13 +4,13 @@
 #}
 <section class="s-block mudarrib-location container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
-        <h2>{{ component.title|default('موقعنا') }}</h2>
+        <h2>{{ component.title|default(trans('mudarrib.location.title')) }}</h2>
         <div class="line-glow"></div>
     </div>
     <div class="location-box">
         {% if component.shape|default('1') == '1' %}<div class="location-map">{{ component.map_icon|default('📍') }}</div>{% endif %}
         <div class="location-info">
-            <h3>{{ component.name|default('استوديو التدريب') }}</h3>
+            <h3>{{ component.name|default(trans('mudarrib.location.name')) }}</h3>
             {% if component.address %}<div class="li-row"><span class="ic">📍</span><span>{{ component.address }}</span></div>{% endif %}
             {% if component.hours %}<div class="li-row"><span class="ic">🕐</span><span>{{ component.hours }}</span></div>{% endif %}
             {% if component.phone %}<div class="li-row"><span class="ic">📞</span><span>{{ component.phone }}</span></div>{% endif %}

@@ -4,15 +4,15 @@
 #}
 <section class="s-block mudarrib-contact container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
-        <h2>{{ component.title|default('تواصل معي') }}</h2>
+        <h2>{{ component.title|default(trans('mudarrib.contact.title')) }}</h2>
         <div class="line-glow"></div>
     </div>
     {% if component.shape|default('1') == '1' %}
         <div class="contact-form">
-            <div class="cf-field"><label>{{ component.name_label|default('الاسم') }}</label><input type="text" placeholder="{{ component.name_placeholder|default('اسمك') }}"></div>
-            <div class="cf-field"><label>{{ component.phone_label|default('الجوال') }}</label><input type="text" placeholder="{{ component.phone_placeholder|default('05xxxxxxxx') }}"></div>
-            <div class="cf-field"><label>{{ component.msg_label|default('رسالتك') }}</label><textarea rows="4" placeholder="{{ component.msg_placeholder|default('اكتب استفسارك') }}"></textarea></div>
-            <button class="cf-submit">{{ component.btn_label|default('إرسال') }}</button>
+            <div class="cf-field"><label>{{ component.name_label|default(trans('mudarrib.contact.name')) }}</label><input type="text" placeholder="{{ component.name_placeholder|default(trans('mudarrib.contact.name_placeholder')) }}"></div>
+            <div class="cf-field"><label>{{ component.phone_label|default(trans('mudarrib.contact.phone')) }}</label><input type="text" placeholder="{{ component.phone_placeholder|default('05xxxxxxxx') }}"></div>
+            <div class="cf-field"><label>{{ component.msg_label|default(trans('mudarrib.contact.message')) }}</label><textarea rows="4" placeholder="{{ component.msg_placeholder|default(trans('mudarrib.contact.message_placeholder')) }}"></textarea></div>
+            <button class="cf-submit">{{ component.btn_label|default(trans('mudarrib.contact.send')) }}</button>
         </div>
     {% else %}
         <div class="contact-grid">

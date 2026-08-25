@@ -4,19 +4,19 @@
 #}
 <section class="s-block mudarrib-vtesti container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
-        <h2>{{ component.title|default('عملاؤنا يتحدثون') }}</h2>
+        <h2>{{ component.title|default(trans('mudarrib.vtesti.title')) }}</h2>
         <div class="line-glow"></div>
     </div>
     {% if component.shape|default('1') == '1' %}
         <div class="vtesti-grid">
             {% for item in component.items|default([]) %}
-                <div class="vtesti-card"><div class="thumb">{{ item.icon|default('🎥') }}<span class="play">▶</span></div><div class="v-body"><h4>{{ item.name }}</h4><span>{{ item.caption|default('شاهد تجربته') }}</span></div></div>
+                <div class="vtesti-card"><div class="thumb">{{ item.icon|default('🎥') }}<span class="play">▶</span></div><div class="v-body"><h4>{{ item.name }}</h4><span>{{ item.caption|default(trans('mudarrib.vtesti.watch')) }}</span></div></div>
             {% endfor %}
         </div>
     {% else %}
         <div class="vtesti-slider">
             {% for item in component.items|default([]) %}
-                <div class="vtesti-card"><div class="thumb">{{ item.icon|default('🎥') }}<span class="play">▶</span></div><div class="v-body"><h4>{{ item.name }}</h4><span>{{ item.caption|default('شاهد تجربته') }}</span></div></div>
+                <div class="vtesti-card"><div class="thumb">{{ item.icon|default('🎥') }}<span class="play">▶</span></div><div class="v-body"><h4>{{ item.name }}</h4><span>{{ item.caption|default(trans('mudarrib.vtesti.watch')) }}</span></div></div>
             {% endfor %}
         </div>
     {% endif %}

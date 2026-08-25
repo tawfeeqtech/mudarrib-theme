@@ -5,12 +5,12 @@
 #}
 <section class="s-block mudarrib-schedule container" data-shape="{{ component.shape|default('1') }}">
     <div class="section-header">
-        <h2>{{ component.title|default('جدول الحصص الأسبوعي') }}</h2>
+        <h2>{{ component.title|default(trans('mudarrib.schedule.title')) }}</h2>
         <div class="line-glow"></div>
     </div>
     {% if component.shape|default('1') == '1' %}
         <table class="sched-table">
-            <tr><th>اليوم</th>{% for t in component.times_text|default('6 صباحاً,4 عصراً,8 مساءً')|split(',') %}{% if t|trim %}<th>{{ t|trim }}</th>{% endif %}{% endfor %}</tr>
+            <tr><th>{{ trans('mudarrib.schedule.day') }}</th>{% for t in component.times_text|default(trans('mudarrib.schedule.times'))|split(',') %}{% if t|trim %}<th>{{ t|trim }}</th>{% endif %}{% endfor %}</tr>
             {% for row in component.items|default([]) %}
                 <tr>
                     <td>{{ row.day }}</td>

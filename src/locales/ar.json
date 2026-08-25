@@ -23,5 +23,144 @@
   "common": {
     "bank_offer_sub_title_multiple": "ادفع قيمة مشترياتك عبر أحد البطاقات البنكة التالية واحصل على الخصم المحدد",
     "bank_offer_sub_title_single": "ادفع قيمة مشترياتك عبر أحد بطاقات بنك :bank_name واحصل على خصم بنسبة "
+  },
+  "mudarrib": {
+    "achievements": {
+      "title": "إنجازات مع الرياضيين"
+    },
+    "before_after": {
+      "title": "قبل وبعد"
+    },
+    "common": {
+      "before": "قبل",
+      "after": "بعد",
+      "currency": "ريال",
+      "select": "اختر",
+      "avatar_initial": "ع"
+    },
+    "blog": {
+      "read_more": "اقرأ المزيد ←",
+      "title": "نصائح رياضية"
+    },
+    "calculator": {
+      "result": "باقتك المقترحة",
+      "title": "احسب باقتك",
+      "btn": "احسب"
+    },
+    "case": {
+      "title": "قصص نجاح حقيقية",
+      "tag": "قصة نجاح"
+    },
+    "certs": {
+      "title": "شهادات معتمدة"
+    },
+    "comparison": {
+      "title": "قارن الباقات",
+      "feature": "الميزة"
+    },
+    "contact": {
+      "message_placeholder": "اكتب استفسارك",
+      "title": "تواصل معي",
+      "phone": "الجوال",
+      "message": "رسالتك",
+      "name": "الاسم",
+      "send": "إرسال",
+      "name_placeholder": "اسمك"
+    },
+    "countdown": {
+      "title": "⚡ عرض محدود ينتهي قريباً",
+      "strip_title": "⚡ ينتهي العرض خلال:",
+      "minutes": "دقيقة",
+      "seconds": "ثانية",
+      "hours": "ساعة",
+      "days": "يوم"
+    },
+    "counters": {
+      "title": "أرقام تتحدث عنا"
+    },
+    "cta": {
+      "text": "لا تؤجل هدفك أكثر. ابدأ اليوم بخطة تدريب مخصصة.",
+      "title": "جاهز تبدأ رحلتك؟",
+      "btn": "ابدأ الآن"
+    },
+    "faq": {
+      "title": "الأسئلة الشائعة"
+    },
+    "features": {
+      "title": "ماذا تحصل في الباقة؟"
+    },
+    "floating": {
+      "whatsapp": "تواصل واتساب"
+    },
+    "gallery": {
+      "title": "ألبوم الرياضيين"
+    },
+    "hero": {
+      "title_centered": "حقق هدفك البدني بخطة علمية واضحة",
+      "subtitle": "اصنع نسختك الأفضل مع",
+      "title": "إعداد بدني احترافي"
+    },
+    "insta": {
+      "title": "تابعنا على انستغرام"
+    },
+    "location": {
+      "name": "استوديو التدريب",
+      "title": "موقعنا"
+    },
+    "partners": {
+      "title": "عملنا مع"
+    },
+    "pricing": {
+      "single_name": "الجدول التدريبي",
+      "popular": "الأكثر طلباً",
+      "title": "اختر باقتك",
+      "subscribe": "اشترك الآن",
+      "subscribe_short": "اشترك"
+    },
+    "programs": {
+      "title": "برامج التدريب"
+    },
+    "promo": {
+      "text": "استخدم الكود عند الدفع واحصل على خصم",
+      "title": "خصم خاص لمتابعيني 🎁",
+      "title_short": "خصم خاص لمتابعيني"
+    },
+    "quiz": {
+      "btn": "اكتشف باقتك المناسبة",
+      "title": "اعرف مستواك"
+    },
+    "results": {
+      "title": "نتائج اللاعبين"
+    },
+    "schedule": {
+      "times": "6 صباحاً,4 عصراً,8 مساءً",
+      "title": "جدول الحصص الأسبوعي",
+      "day": "اليوم"
+    },
+    "steps": {
+      "title": "كيف تبدأ؟"
+    },
+    "story": {
+      "before_title": "لحظة البداية",
+      "coach_name": "اسم الكوتش",
+      "role": "مدرب معتمد",
+      "after_title": "التحول"
+    },
+    "team": {
+      "title": "فريق التدريب"
+    },
+    "testimonials": {
+      "title": "ماذا يقول الأبطال؟"
+    },
+    "video": {
+      "title": "تعرّف على الكوتش"
+    },
+    "vtesti": {
+      "title": "عملاؤنا يتحدثون",
+      "watch": "شاهد تجربته"
+    },
+    "why": {
+      "title": "لماذا تتدرب معي؟"
+    }
   }
 }
